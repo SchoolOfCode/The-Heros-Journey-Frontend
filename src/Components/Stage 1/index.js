@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom';
-import Input from '../Input';
-import Button from '../Button';
 import Header from '../Header';
 
 // Stage 1 - Application Stage - Main Menu of game - Typing name, (Saving state), List Info about school of code - Coding experience? Employment Statistics?
@@ -15,11 +13,9 @@ function Stage1() {
         backgroundSize: `100vw 100vh`,
       }}
     >
-
       <Header text="Heros Journey" />
       {/* <Input placeholder="Enter Username" /> */}
       <Link to="/stage2">Play</Link>
-
     </div>
   );
 }

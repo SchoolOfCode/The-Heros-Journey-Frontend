@@ -1,10 +1,9 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Stage1 from '../Stage 1/';
 import Stage2 from '../Stage 2/';
 import Stage3 from '../Stage 3/';
 import Stage4 from '../Stage 4/';
 import Stage5 from '../Stage 5/';
-
 
 function App() {
   return (

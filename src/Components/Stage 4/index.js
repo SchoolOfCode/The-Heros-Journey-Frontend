@@ -47,6 +47,7 @@ function Stage4() {
         break;
       case '4':
         console.log('useWindow');
+      default:
     }
   }
 
