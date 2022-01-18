@@ -10,11 +10,12 @@ function Stage3() {
     <div
       className="stage"
       style={{
-        backgroundImage: `url("https://cdn.pixabay.com/photo/2018/02/01/06/40/rocket-3122690_960_720.png")`,
+        backgroundImage: `url("https://media.istockphoto.com/vectors/spaceship-cockpit-interior-space-and-planets-view-vector-id1208978034?k=20&m=1208978034&s=612x612&w=0&h=dAOScftuKesONgfb2q4equDR__kTe-UsIk_OmCcvMQk=")`,
         backgroundRepeat: `no-repeat`,
         backgroundSize: `100vw 100vh`,
       }}
     >
+      <h1>Stage 3</h1>
       <Input placeholder="Enter Password" />
       <Button text="Submit" />
       {/* <Link to="/stage4">Stage 4</Link> */}

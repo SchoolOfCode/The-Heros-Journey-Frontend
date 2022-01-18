@@ -7,7 +7,7 @@ function Stage5() {
     <div
       className="stage"
       style={{
-        backgroundImage: `url("https://cdn.pixabay.com/photo/2018/02/01/06/40/rocket-3122690_960_720.png")`,
+        backgroundImage: `url("https://cdn.pixabay.com/photo/2018/03/26/14/07/space-3262811_960_720.jpg")`,
         backgroundRepeat: `no-repeat`,
         backgroundSize: `100vw 100vh`,
       }}
