@@ -1,16 +1,23 @@
 import { Link } from 'react-router-dom';
-import UsernameInput from '../Stage 1/UsernameInput';
-import Submit from '../Submit';
 import styled from 'styled-components';
+import Input from '../Input';
+import Button from '../Button';
 
 // Stage 1 - Application Stage - Main Menu of game - Typing name, (Saving state), List Info about school of code - Coding experience? Employment Statistics?
 
 function Stage1() {
   return (
-    <div>
+    <div
+      className="stage"
+      style={{
+        backgroundImage: `url("https://cdn.pixabay.com/photo/2018/02/01/06/40/rocket-3122690_960_720.png")`,
+        backgroundRepeat: `no-repeat`,
+        backgroundSize: `100vw 100vh`,
+      }}
+    >
+      <Input placeholder="Enter Username" />
+      <Button text="Play" />
       {/* <Link to="/stage2">Stage 2</Link> */}
-      <UsernameInput />
-      <Submit />
     </div>
   );
 }

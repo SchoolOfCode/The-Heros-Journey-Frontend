@@ -8,7 +8,14 @@ import styled from 'styled-components';
 
 function App() {
   return (
-    <div>
+    <div
+      className="stage"
+      style={{
+        backgroundImage: `url("https://cdn.pixabay.com/photo/2018/02/01/06/40/rocket-3122690_960_720.png")`,
+        backgroundRepeat: `no-repeat`,
+        backgroundSize: `100vw 100vh`,
+      }}
+    >
       <Routes>
         <Route path="stage1" element={<Stage1 />} />
         <Route path="stage2" element={<Stage2 />} />
