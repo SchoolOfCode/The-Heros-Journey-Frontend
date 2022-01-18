@@ -18,7 +18,7 @@ function Stage4() {
       <h1>Stage 4</h1>
       <Input placeholder="Enter Password" />
       <Button text="Submit" />
-      {/* <Link to="/stage5">Stage 5</Link> */}
+      {/* <Link to="/stage5">Stage Five</Link> */}
     </div>
   );
 }
