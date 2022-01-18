@@ -17,7 +17,7 @@ function Stage1() {
     >
       <Input placeholder="Enter Username" />
       <Button text="Play" />
-      {/* <Link to="/stage2">Stage 2</Link> */}
+      {/* <Link to="/stage2">Stage Two</Link> */}
     </div>
   );
 }
