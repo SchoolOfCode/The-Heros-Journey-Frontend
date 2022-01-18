@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import Header from '../Header';
+import { Link } from 'react-router-dom';
 
 // Stage 5 - Mission complete - Launch into the real world - Light speed into another galaxy - Motivational quotes fetched from an API of past bootcampers
 
@@ -12,7 +14,8 @@ function Stage5() {
         backgroundSize: `100vw 100vh`,
       }}
     >
-      <h1>Stage 5</h1>
+      <Header text="Mission Complete!" />
+      <Link to="/stage1">Play Again?</Link>
     </div>
   );
 }
