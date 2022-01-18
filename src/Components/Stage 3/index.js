@@ -1,29 +1,30 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import Input from '../Input';
-import Header from '../Header';
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Input from "../Input";
+import Header from "../Header";
 
 // Stage 3 - Imposter Syndrome stage - Hole in the ship Weeks 4-5 Backend Node, SQL
+// stage 3
 
 function Stage3() {
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState("");
 
-  const [link, setLink] = useState('/stage3');
+  const [link, setLink] = useState("/stage3");
 
   function handleChange(e) {
     setPassword(e.target.value);
-    if (e.target.value.toLowerCase() === 'SQL') {
-      setLink('/stage4');
+    if (e.target.value.toLowerCase() === "SQL") {
+      setLink("/stage4");
     } else {
-      setLink('/stage3');
+      setLink("/stage3");
     }
   }
 
   function submit() {
-    if (password.toLowerCase() !== 'SQL') {
-      return alert('Access Denied');
+    if (password.toLowerCase() !== "SQL") {
+      return alert("Access Denied");
     } else {
-      alert('Permission granted');
+      alert("Permission granted");
     }
   }
 
