@@ -62,7 +62,7 @@ function Stage4() {
       <Header text="React Room" />
       <p>Hint: Console</p>
       <Input
-        placeholder="Enter Password"
+        placeholder="Password"
         handleChange={handleChange}
         style={{ position: 'fixed', bottom: '35vh', right: '7vw', opacity: 1 }}
       />
