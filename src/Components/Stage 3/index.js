@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Input from "../Input";
 import Header from "../Header";
-
+import Text from "../Text";
 // Stage 3 - Imposter Syndrome stage - Hole in the ship Weeks 4-5 Backend Node, SQL
 // stage 3
 
@@ -13,6 +13,7 @@ function Stage3() {
 
   function handleChange(e) {
     setPassword(e.target.value);
+    console.log(password);
     if (e.target.value.toLowerCase() === "SQL") {
       setLink("/stage4");
     } else {
@@ -42,6 +43,54 @@ function Stage3() {
       <Link onClick={submit} to={link}>
         Open
       </Link>
+      <Text
+        text="INSERT INTO spaceship"
+        style={{
+          position: "fixed",
+          bottom: "45vh",
+          left: "29.5vw",
+          opacity: 1,
+          fontSize: "1.3vh",
+          fontWeight: "bold",
+          color: "white",
+        }}
+      />
+      <Text
+        text="(SQL)"
+        style={{
+          position: "fixed",
+          bottom: "43vh",
+          left: "32.5vw",
+          opacity: 1,
+          fontSize: "1.3vh",
+          fontWeight: "bold",
+          color: "white",
+        }}
+      />
+      <Text
+        text="($1, $2) RETURNING"
+        style={{
+          position: "fixed",
+          bottom: "45vh",
+          right: "30vw",
+          opacity: 1,
+          fontSize: "1.3vh",
+          fontWeight: "bold",
+          color: "white",
+        }}
+      />
+      <Text
+        text="password"
+        style={{
+          position: "fixed",
+          bottom: "43vh",
+          right: "32vw",
+          opacity: 1,
+          fontSize: "1.3vh",
+          fontWeight: "bold",
+          color: "white",
+        }}
+      />
     </div>
   );
 }
