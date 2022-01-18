@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 import Input from '../Input';
 import Button from '../Button';
 import Header from '../Header';
@@ -16,9 +15,11 @@ function Stage1() {
         backgroundSize: `100vw 100vh`,
       }}
     >
+
       <Header text="Heros Journey" />
       {/* <Input placeholder="Enter Username" /> */}
       <Link to="/stage2">Play</Link>
+
     </div>
   );
 }
