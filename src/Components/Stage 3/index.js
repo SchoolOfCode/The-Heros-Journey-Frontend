@@ -1,11 +1,32 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 import Input from '../Input';
-import Button from '../Button';
+import Header from '../Header';
 
 // Stage 3 - Imposter Syndrome stage - Hole in the ship Weeks 4-5 Backend Node, SQL
 
 function Stage3() {
+  const [password, setPassword] = useState('');
+
+  const [link, setLink] = useState('/stage3');
+
+  function handleChange(e) {
+    setPassword(e.target.value);
+    if (e.target.value.toLowerCase() === 'SQL') {
+      setLink('/stage4');
+    } else {
+      setLink('/stage3');
+    }
+  }
+
+  function submit() {
+    if (password.toLowerCase() !== 'SQL') {
+      return alert('Access Denied');
+    } else {
+      alert('Permission granted');
+    }
+  }
+
   return (
     <div
       className="stage"
@@ -15,10 +36,11 @@ function Stage3() {
         backgroundSize: `100vw 100vh`,
       }}
     >
-      <h1>Stage 3</h1>
-      <Input placeholder="Enter Password" />
-      <Button text="Submit" />
-      {/* <Link to="/stage4">Stage 4</Link> */}
+      <Header text="Hole in the spaceship" />
+      <Input placeholder="Enter Password" handleChange={handleChange} />
+      <Link onClick={submit} to={link}>
+        Open
+      </Link>
     </div>
   );
 }

@@ -1,10 +1,8 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Click from '../Click';
-import styled from 'styled-components';
 import Input from '../Input';
-import Button from '../Button';
 import Header from '../Header';
-import { useState, useEffect } from 'react';
 
 // Stage 4 - Heroes journey - transformative - Floating in space Weeks 7-8 React
 
@@ -27,8 +25,6 @@ function Stage4() {
       setLink('/stage4');
     }
   }
-
-  //Work out functionality so that a user doesn't have to click twice to progress to the next stage
 
   function submit() {
     if (password.toLowerCase() !== 'hooks') {
