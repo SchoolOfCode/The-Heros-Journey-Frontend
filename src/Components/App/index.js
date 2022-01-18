@@ -4,7 +4,7 @@ import Stage2 from '../Stage 2/';
 import Stage3 from '../Stage 3/';
 import Stage4 from '../Stage 4/';
 import Stage5 from '../Stage 5/';
-import styled from 'styled-components';
+
 
 function App() {
   return (

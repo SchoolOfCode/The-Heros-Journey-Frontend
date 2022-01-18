@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+
 import Input from '../Input';
-import Button from '../Button';
+
 import Popup from '../Popup';
 import { useState } from 'react';
 import './style.css';
@@ -13,25 +13,47 @@ import './style.css';
 // PASSWORD: 
 
 // Functionality
-  // Event listeners - onclick
+  // Event listeners - onclick Done
   // Pop-up windows when clicked will show a hint, i.e. "splice, map, forEach" or a message, i.e. "Nothing." - DONE
-  // Create another button component that will handle the different click events.
+  
 
 // Create a button.
-// Create an event listener with the button (onclick).
-// When onclick, it will have a pop-up message.
+// Create an event listener with the button (onclick).Done
+// When onclick, it will have a pop-up . Done
+//Create content of the por-up window
 // Style the button to be transparent.
 
 function Stage2() {
+  const [isOpen1, setIsOpen1] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [isOpen3, setIsOpen3] = useState(false);
+  const [password, setPassword] = useState('');
+  const [link, setLink] = useState('/stage2');
 
+
+  function handleChange(e) {
+    setPassword(e.target.value);
+    if (e.target.value.toLowerCase() === 'variables') {
+      setLink('/stage3');
+    } else {
+      setLink('/stage2');
+    }
+  }
+
+  function submit() {
+    if (password.toLowerCase() !== 'variables') {
+      return alert('Access Denied');
+    } else {
+      alert('Permission granted');
+    }
+  }
+  
   function handleClick(){
     console.log("Hello");
   };
 
 // Each pop-up will have to have their own state/function or else they all of them will open at the same time.
-  const [isOpen1, setIsOpen1] = useState(false);
-  const [isOpen2, setIsOpen2] = useState(false);
-  const [isOpen3, setIsOpen3] = useState(false);
+ 
  
   const togglePopup1 = () => {
     setIsOpen1(!isOpen1);
@@ -55,8 +77,8 @@ function Stage2() {
       }}
     >
       <h1>Stage 2</h1>
-      <Input placeholder="Enter Password" />
-      <Button text="Submit" />
+      <Input placeholder="Enter Password"  handleChange={handleChange} />
+      <Link text="Submit" onClick={submit} to={link} >Submit</Link>
       {/* <Link to="/stage3">Stage 3</Link> */}
 
       {/* This button can be the intro button - tells user what to do? / the aim */}
