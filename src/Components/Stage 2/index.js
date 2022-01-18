@@ -10,7 +10,7 @@ import './style.css';
 
 // The hints that the user(s) have to solve - the answer for the questions will be the password.
 // Later in the week: to solve the password, users will be given code to solve, i.e. iterating through an array to get a letter from the password
-// PASSWORD: 
+// PASSWORD: Done
 
 // Functionality
   // Event listeners - onclick Done
@@ -20,8 +20,12 @@ import './style.css';
 // Create a button.
 // Create an event listener with the button (onclick).Done
 // When onclick, it will have a pop-up . Done
-//Create content of the por-up window
-// Style the button to be transparent.
+//Create content of the por-up window Done
+// Style the button to be transparent. 
+
+// What next
+//Create an introduction that tells the user how to get the password
+//create problems for each pop up box
 
 function Stage2() {
   const [isOpen1, setIsOpen1] = useState(false);
@@ -29,6 +33,7 @@ function Stage2() {
   const [isOpen3, setIsOpen3] = useState(false);
   const [password, setPassword] = useState('');
   const [link, setLink] = useState('/stage2');
+  const [intro, setIntro] = useState(false);
 
 
   function handleChange(e) {
@@ -47,10 +52,8 @@ function Stage2() {
       alert('Permission granted');
     }
   }
+    
   
-  function handleClick(){
-    console.log("Hello");
-  };
 
 // Each pop-up will have to have their own state/function or else they all of them will open at the same time.
  
@@ -65,6 +68,10 @@ function Stage2() {
 
   const togglePopup3 = () => {
     setIsOpen3(!isOpen3);
+  }
+
+  const introBox= () => {
+    setIntro(!intro);
   }
 
   return (
@@ -82,11 +89,20 @@ function Stage2() {
       {/* <Link to="/stage3">Stage 3</Link> */}
 
       {/* This button can be the intro button - tells user what to do? / the aim */}
-      <button onClick={handleClick}>Hello</button>
+      <input type="button" value="Click me" onClick={introBox} />
+    {intro && <Popup
+      content={<>
+        <h1>Hello Welcome to the start of your hero journey.</h1>
+        <p>On this level you will be exploring Vanila.js</p>
+        <p>Click around to find hints for the password</p>
+        
+      </>}
+      handleClose={introBox}
+    />}
       
       
     {/* Pop-up 1 */}
-      <input type="button" value="" onClick={togglePopup1} />
+      <input type="button" value="" onClick={togglePopup1} style={{ position: 'fixed', bottom: '7vh', left: '49vw', opacity: 3 }} />
     {isOpen1 && <Popup
       content={<>
         <b>let</b>
@@ -96,7 +112,7 @@ function Stage2() {
     />}
 
     {/* Pop-up 2 */}
-    <input type="button" value="" onClick={togglePopup2} />
+    <input type="button" value="" onClick={togglePopup2} style={{ position: 'fixed', bottom: '63vh', left: '15vw', opacity: 3 }}/>
     {isOpen2 && <Popup
       content={<>
         <b>var</b>
@@ -106,7 +122,7 @@ function Stage2() {
     />}
 
     {/* Pop-up 3 */}
-    <input type="button" value="" onClick={togglePopup3} />
+    <input type="button" value="" onClick={togglePopup3} style={{ position: 'fixed', bottom: '63vh', right: '15vw', opacity: 3 }} />
     {isOpen3 && <Popup
       content={<>
         <b>const</b>
