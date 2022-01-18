@@ -13,8 +13,7 @@ function Stage3() {
 
   function handleChange(e) {
     setPassword(e.target.value);
-    console.log(password);
-    if (e.target.value.toLowerCase() === "SQL") {
+    if (e.target.value === "VALUES") {
       setLink("/stage4");
     } else {
       setLink("/stage3");
@@ -22,7 +21,7 @@ function Stage3() {
   }
 
   function submit() {
-    if (password.toLowerCase() !== "SQL") {
+    if (password !== "VALUES") {
       return alert("Access Denied");
     } else {
       alert("Permission granted");
