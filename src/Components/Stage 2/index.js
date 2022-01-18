@@ -4,6 +4,7 @@ import Input from '../Input';
 import Button from '../Button';
 import Popup from '../Popup';
 import { useState } from 'react';
+import './style.css';
 
 // Stage 2 - Start of the journey - Excited - Space Bedroom - Weeks 1-3 Vanilla JS
 
@@ -13,7 +14,7 @@ import { useState } from 'react';
 
 // Functionality
   // Event listeners - onclick
-  // Pop-up windows when clicked will show a hint, i.e. "splice, map, forEach" or a message, i.e. "Nothing."
+  // Pop-up windows when clicked will show a hint, i.e. "splice, map, forEach" or a message, i.e. "Nothing." - DONE
   // Create another button component that will handle the different click events.
 
 // Create a button.
@@ -27,10 +28,21 @@ function Stage2() {
     console.log("Hello");
   };
 
-  const [isOpen, setIsOpen] = useState(false);
+// Each pop-up will have to have their own state/function or else they all of them will open at the same time.
+  const [isOpen1, setIsOpen1] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [isOpen3, setIsOpen3] = useState(false);
  
-  const togglePopup = () => {
-    setIsOpen(!isOpen);
+  const togglePopup1 = () => {
+    setIsOpen1(!isOpen1);
+  }
+
+  const togglePopup2 = () => {
+    setIsOpen2(!isOpen2);
+  }
+
+  const togglePopup3 = () => {
+    setIsOpen3(!isOpen3);
   }
 
   return (
@@ -47,23 +59,40 @@ function Stage2() {
       <Button text="Submit" />
       {/* <Link to="/stage3">Stage 3</Link> */}
 
-      <button onClick={handleClick}>Test</button>
+      {/* This button can be the intro button - tells user what to do? / the aim */}
+      <button onClick={handleClick}>Hello</button>
       
       
-    {/* Prop */}
-      <input
-      type="button"
-      value="Click to Open Popup"
-      onClick={togglePopup}
-    />
-    {isOpen && <Popup
+    {/* Pop-up 1 */}
+      <input type="button" value="" onClick={togglePopup1} />
+    {isOpen1 && <Popup
       content={<>
-        <b>Design your Popup</b>
-        <p>Hint 1</p>
-        <button>Test button</button>
+        <b>let</b>
+        {/* <p>Hint 1</p> */}
       </>}
-      handleClose={togglePopup}
+      handleClose={togglePopup1}
     />}
+
+    {/* Pop-up 2 */}
+    <input type="button" value="" onClick={togglePopup2} />
+    {isOpen2 && <Popup
+      content={<>
+        <b>var</b>
+        {/* <p>Hint 2</p> */}
+      </>}
+      handleClose={togglePopup2}
+    />}
+
+    {/* Pop-up 3 */}
+    <input type="button" value="" onClick={togglePopup3} />
+    {isOpen3 && <Popup
+      content={<>
+        <b>const</b>
+        {/* <p>Hint 3</p> */}
+      </>}
+      handleClose={togglePopup3}
+    />}
+
     </div>
 
   );
