@@ -1,6 +1,11 @@
-function Input({ handleChange, placeholder }) {
+function Input({ handleChange, placeholder, style }) {
   return (
-    <input type="text" onChange={handleChange} placeholder={placeholder} />
+    <input
+      type="text"
+      onChange={handleChange}
+      placeholder={placeholder}
+      style={style}
+    />
   );
 }
 
