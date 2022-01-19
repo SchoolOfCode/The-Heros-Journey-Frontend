@@ -44,3 +44,7 @@
 .stage1Header {
   color: black;
 }
+
+input {
+  position: fixed;
+}

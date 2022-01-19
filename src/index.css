@@ -25,11 +25,22 @@ code {
   width: 100vw;
 }
 
+.stagebg {
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100wh;
+  width: 100ww;
+  z-index: -1;
+}
+
 h1 {
   color: white;
 }
 
-a {
+/* a {
   text-decoration: none;
   color: white;
 }
@@ -37,4 +48,4 @@ a {
 a:visited {
   text-decoration: none;
   color: white;
-}
+} */

@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Click from '../Click';
 import Input from '../Input';
-import Header from '../Header';
+import Sidebar from '../Sidebar';
+import Padlock from '../Padlock';
 
 // Stage 4 - Heroes journey - transformative - Floating in space Weeks 7-8 React
 
@@ -55,25 +56,14 @@ function Stage4() {
     <div
       className="stage"
       style={{
-        backgroundImage: `url("https://media.istockphoto.com/vectors/chairs-at-shuttle-window-with-view-of-other-planets-vector-id1361190746?k=20&m=1361190746&s=612x612&w=0&h=JKwkb_BRgNsIj95yY4xjOInH73vGtNF-PAs6KwYIuYs=")`,
+        backgroundImage: `url("https://i.imgur.com/nBxe5cs.png")`,
         backgroundRepeat: `no-repeat`,
-        backgroundSize: `100vw 100vh`,
+        backgroundPosition: `center`,
+        backgroundSize: `100vh`,
       }}
     >
-      <Header text="React Room" />
-      <p>Hint: Console</p>
-      <Input
-        placeholder="Password"
-        handleChange={handleChange}
-        style={{ position: 'fixed', bottom: '35vh', right: '7vw', opacity: 1 }}
-      />
-      <Link
-        onClick={submit}
-        to={link}
-        style={{ position: 'fixed', bottom: '30vh', right: '10vw', opacity: 1 }}
-      >
-        Open Door
-      </Link>
+      <Sidebar title="Crossing the threshold..." description="
+      X" stageDesc="React"/>
       <Click
         text="1"
         handleClick={handleClick}
@@ -94,6 +84,20 @@ function Stage4() {
         handleClick={handleClick}
         style={{ position: 'fixed', top: '47vh', right: '49vw', opacity: 0 }}
       />
+
+      <Input
+        placeholder="Password"
+        handleChange={handleChange}
+        style={{ position: 'fixed', bottom: '8vh', right: '15vh'}}
+      />
+      <Link
+        onClick={submit}
+        to={link}
+      >
+        <Padlock />
+      </Link>
+      <p
+        style={{ position: 'fixed', bottom: '10vh', right: '20vh'}}>Hint: Console</p>
     </div>
   );
 }

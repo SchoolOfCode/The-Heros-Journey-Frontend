@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Input from '../Input';
-import Header from '../Header';
 import Text from '../Text';
 import Padlock from '../Padlock';
 import Sidebar from '../Sidebar';
@@ -11,7 +10,6 @@ import Sidebar from '../Sidebar';
 
 function Stage3() {
   const [password, setPassword] = useState('');
-
   const [link, setLink] = useState('/stage3');
 
   function handleChange(e) {
@@ -41,12 +39,9 @@ function Stage3() {
         backgroundSize: `100vh`,
       }}
     >
-      <Sidebar title="Imposter!" description="Imposter Syndrome..." />
-      <Header text="Hole in the spaceship" />
-      <Input placeholder="Password" handleChange={handleChange} />
-      <Link onClick={submit} to={link}>
-        Open
-      </Link>
+      <Sidebar title="Houston, we have a problem!" description="
+      Getting out of your comfort zone and jumping straight into the unknown is an overwhelming feeling.
+      'What am I doing here?' is a question you may ask yourself as you begin to self-doubt and be filled with intrusive thoughts..." stageDesc="Back-end"/>
       <Text
         text="INSERT INTO spaceship"
         style={{
@@ -95,7 +90,16 @@ function Stage3() {
           color: 'white',
         }}
       />
-      <Padlock />
+      <Input 
+        placeholder="Password" 
+        handleChange={handleChange} 
+        style={{ position: 'fixed', bottom: '8vh', right: '15vh'}} 
+      />
+      <Link 
+        onClick={submit} 
+        to={link}>
+          <Padlock />
+      </Link>
     </div>
   );
 }

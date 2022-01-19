@@ -10,7 +10,7 @@ function App() {
     <div
       className="stage"
       style={{
-        backgroundImage: `url("https://cdn.pixabay.com/photo/2018/02/01/06/40/rocket-3122690_960_720.png")`,
+        // backgroundImage: `url("https://cdn.pixabay.com/photo/2018/02/01/06/40/rocket-3122690_960_720.png")`,
         backgroundRepeat: `no-repeat`,
         backgroundSize: `100vw 100vh`,
       }}

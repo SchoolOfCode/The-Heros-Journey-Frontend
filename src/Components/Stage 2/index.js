@@ -47,37 +47,28 @@ function Stage2() {
     setIsOpen3(!isOpen3);
   };
 
+
   return (
     <div
       className="stage"
-      style={{
-        backgroundImage: `url("https://i.imgur.com/6BnAjur.png")`,
-        backgroundRepeat: `no-repeat`,
-        backgroundPosition: `center`,
-        backgroundSize: `100vh`,
-      }}
+      // style={{
+      //   backgroundImage: `url("https://i.imgur.com/6BnAjur.png")`,
+      //   backgroundRepeat: `no-repeat`,
+      //   backgroundPosition: `center`,
+      //   backgroundSize: `100vh`,
+      // }}
     >
-      <Sidebar title='Start of the Journey' description='Eyes full of wonder' />
+      <img src="https://i.imgur.com/6BnAjur.png" alt="background" className="stagebg" height="90%" />
 
-      <h1>Stage 2</h1>
-      <Input placeholder="Password" handleChange={handleChange} />
-      <Link onClick={submit} to={link}>
-        Enter
-      </Link>
+      <Sidebar title="Into the unknown..." description="Every start of a new journey is always exciting... Eyes full of wonder, ready to learn..." stageDesc="VanillaJS" />
 
       {/* Pop-up 1 */}
-      <input
-        type="button"
-        value=""
-        onClick={togglePopup1}
-        style={{ position: 'fixed', bottom: '7vh', left: '49vw', opacity: 3 }}
+      <input type="button" value="test" onClick={togglePopup1}
+        style={{ position: 'fixed', top: '35vh', left: '47.5vw', opacity: 1, width: '35wh', height: '10vh', fontSize: '2vh' }}
       />
-      {isOpen1 && (
-        <Popup
-          content={
+      {isOpen1 && ( <Popup content={
             <>
               <b>let</b>
-              {/* <p>Hint 1</p> */}
             </>
           }
           handleClose={togglePopup1}
@@ -85,15 +76,10 @@ function Stage2() {
       )}
 
       {/* Pop-up 2 */}
-      <input
-        type="button"
-        value=""
-        onClick={togglePopup2}
-        style={{ position: 'fixed', bottom: '63vh', left: '15vw', opacity: 3 }}
+      <input type="button" onClick={togglePopup2}
+        style={{ position: 'fixed', top: '14.5vh', left: '30.5vw', opacity: 0.5, width: '50wh', height: '7vh' }}
       />
-      {isOpen2 && (
-        <Popup
-          content={
+      {isOpen2 && ( <Popup content={
             <>
               <b>var</b>
             </>
@@ -103,15 +89,10 @@ function Stage2() {
       )}
 
       {/* Pop-up 3 */}
-      <input
-        type="button"
-        value=""
-        onClick={togglePopup3}
-        style={{ position: 'fixed', bottom: '63vh', right: '15vw', opacity: 3 }}
+      <input type="button" onClick={togglePopup3}
+        style={{ position: 'fixed', top: '11vh', right: '33.3vw', opacity: 0.5, width: '6vw', height: '12vh' }}
       />
-      {isOpen3 && (
-        <Popup
-          content={
+      {isOpen3 && ( <Popup content={
             <>
               <b>const</b>
             </>
@@ -119,7 +100,16 @@ function Stage2() {
           handleClose={togglePopup3}
         />
       )};
-      <Padlock />
+      <Input 
+        placeholder="Password" 
+        handleChange={handleChange} 
+        style={{ position: 'fixed', bottom: '8vh', right: '15vh'}} 
+      />
+      <Link 
+        onClick={submit} 
+        to={link}>
+          <Padlock />
+      </Link>
     </div>
   );
 }
