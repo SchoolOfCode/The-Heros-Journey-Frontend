@@ -16,7 +16,7 @@ function App() {
       }}
     >
       <Routes>
-        <Route path="stage1" element={<Stage1 />} />
+        <Route path="/" element={<Stage1 />} />
         <Route path="stage2" element={<Stage2 />} />
         <Route path="stage3" element={<Stage3 />} />
         <Route path="stage4" element={<Stage4 />} />
