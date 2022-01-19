@@ -29,7 +29,7 @@ function HowToPlay() {
         }}
       >
         <Link
-          to="/StartScreen"
+          to="/"
           className="go-link"
           style={{ color: "black", width: "150px" }}
         >
