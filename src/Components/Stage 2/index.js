@@ -51,14 +51,14 @@ function Stage2() {
   return (
     <div
       className="stage"
-      // style={{
-      //   backgroundImage: `url("https://i.imgur.com/6BnAjur.png")`,
-      //   backgroundRepeat: `no-repeat`,
-      //   backgroundPosition: `center`,
-      //   backgroundSize: `100vh`,
-      // }}
+      style={{
+        backgroundImage: `url("https://i.imgur.com/6BnAjur.png")`,
+        backgroundRepeat: `no-repeat`,
+        backgroundPosition: `center`,
+        backgroundSize: `100vh`,
+      }}
     >
-      <img src="https://i.imgur.com/6BnAjur.png" alt="background" className="stagebg" height="90%" />
+      {/* <img src="https://i.imgur.com/6BnAjur.png" alt="background" className="stagebg" height="90%" /> */}
 
       <Sidebar title="The world is your oyster..." description="Every start of a new journey is always exciting... Eyes full of wonder, ready to learn..." stageDesc="VanillaJS" />
 

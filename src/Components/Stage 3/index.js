@@ -46,10 +46,10 @@ function Stage3() {
         text="INSERT INTO spaceship"
         style={{
           position: 'fixed',
-          bottom: '45vh',
-          left: '29.5vw',
+          top: '25vh',
+          left: '32vw',
           opacity: 1,
-          fontSize: '1.3vh',
+          fontSize: '2vh',
           fontWeight: 'bold',
           color: 'white',
         }}
@@ -58,10 +58,10 @@ function Stage3() {
         text="(SQL)"
         style={{
           position: 'fixed',
-          bottom: '43vh',
-          left: '32.5vw',
+          top: '28vh',
+          left: '34vw',
           opacity: 1,
-          fontSize: '1.3vh',
+          fontSize: '2vh',
           fontWeight: 'bold',
           color: 'white',
         }}
@@ -70,10 +70,10 @@ function Stage3() {
         text="($1, $2) RETURNING"
         style={{
           position: 'fixed',
-          bottom: '45vh',
+          bottom: '25vh',
           right: '30vw',
           opacity: 1,
-          fontSize: '1.3vh',
+          fontSize: '2vh',
           fontWeight: 'bold',
           color: 'white',
         }}
@@ -82,10 +82,10 @@ function Stage3() {
         text="password"
         style={{
           position: 'fixed',
-          bottom: '43vh',
+          bottom: '23vh',
           right: '32vw',
           opacity: 1,
-          fontSize: '1.3vh',
+          fontSize: '2vh',
           fontWeight: 'bold',
           color: 'white',
         }}

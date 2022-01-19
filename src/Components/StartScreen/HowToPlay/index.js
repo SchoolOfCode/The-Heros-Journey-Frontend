@@ -30,8 +30,8 @@ function HowToPlay() {
       >
         <Link
           to="/StartScreen"
-          className="link"
-          style={{ color: "black", backgroundColor: "#00ffc2", width: "150px" }}
+          className="go-link"
+          style={{ color: "black", width: "150px" }}
         >
           GO BACK
         </Link>
