@@ -1,0 +1,12 @@
+.link {
+  background-color: #00ffc2;
+  background: #00ffc2;
+  text-align: center;
+  box-shadow: 2px 2px 4px rgba(47, 47, 47, 0.29);
+  border-radius: 30px;
+  border-style: none;
+  margin: 10px;
+  padding: 12px;
+  font-size: 20px;
+  width: 70px;
+}

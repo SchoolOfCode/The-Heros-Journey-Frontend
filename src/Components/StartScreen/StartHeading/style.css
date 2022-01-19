@@ -1,0 +1,17 @@
+h1 {
+  position: fixed;
+  bottom: 60vh;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em;
+
+  color: #ffffff;
+}
