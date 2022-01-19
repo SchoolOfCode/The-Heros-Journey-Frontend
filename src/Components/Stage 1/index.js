@@ -17,7 +17,7 @@ function Stage1() {
         backgroundSize: `100vh`,
         backgroundPosition: "center",
         display: `flex`,
-        flexDirection: `column`
+        flexDirection: `column`,
       }}
     >
       <StartHeading
@@ -34,34 +34,52 @@ function Stage1() {
       >
         This game represents the School of Code journey. You'll go through the
         stages solving coding challanges. Each level respresents a different
-        stage of your coding journey! 
-
-        Please enter a team name and a quote that
+        stage of your coding journey! Please enter a team name and a quote that
         motivates you.
       </p>
-      <InputBox 
-          placeholder="Team Name" 
-          style={{ position: `fixed`,
-          bottom: `25vh`}}
-          />
-        <InputBox placeholder="Quote" 
-          style={{ position: `fixed`,
-          bottom: `30vh`}}
-        />
+
+      <InputBox
+        placeholder="Team Name"
+        style={{
+          position: "fixed",
+          bottom: "30vh",
+          backgroundColor: `white`,
+          textAlign: `center`,
+          boxShadow: `2px 2px 4px rgba(47, 47, 47, 0.29)`,
+          borderRadius: `30px`,
+          borderStyle: `none`,
+          margin: `20px`,
+          padding: `12px 50px`,
+          fontSize: `20px`,
+        }}
+      />
+      <InputBox
+        placeholder="Quote"
+        style={{
+          position: "fixed",
+          bottom: "23vh",
+          backgroundColor: `white`,
+          textAlign: `center`,
+          boxShadow: `2px 2px 4px rgba(47, 47, 47, 0.29)`,
+          borderRadius: `30px`,
+          borderStyle: `none`,
+          margin: `20px`,
+          padding: `12px 50px`,
+          fontSize: `20px`,
+        }}
+      />
+
+      <div style={{ position: "fixed", left: "10" }}></div>
       <div
         style={{
           display: "flex",
           flexDirection: "column",
           position: "fixed",
-          bottom: "20vh",
+          bottom: "18vh",
           alignItems: "center",
-          
         }}
       >
-        <Link
-          to="/stage2"
-          className="go-link"
-        >
+        <Link to="/stage2" className="go-link">
           GO!
         </Link>
       </div>
