@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 // Stage 1 - Application Stage - Main Menu of game - Typing name, (Saving state), List Info about school of code - Coding experience? Employment Statistics?
 
 import InputBox from "../InputBox";
-import Text from "../Text";
 import StartHeading from "../../Components/StartScreen/StartHeading";
 import "./style.css";
 
@@ -22,13 +21,13 @@ function Stage1() {
     >
       <StartHeading
         text="About"
-        style={{ fontSize: "10vh", position: "fixed", top: "10vh" }}
+        style={{ fontSize: "10vh", position: "fixed", top: "15vh" }}
       />
       <p
         style={{
           color: "white",
           position: "fixed",
-          top: "30vh",
+          top: "33vh",
         }}
       >
         This game represents the School of Code journey. You'll go through the

@@ -66,8 +66,8 @@ function Stage4() {
       }}
     >
       <SideNav
-        title="(About this stage), React etc etc"
-        description="X"
+        title="Passing the threshold..."
+        description="Overcoming [...]"
         stageDesc="React"
       />
       <Click

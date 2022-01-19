@@ -16,7 +16,7 @@ function Stage5() {
       }}
     >
       <Header text="Mission Complete!" />
-      <Link className="play-again-link" to="/stage1">
+      <Link className="play-again-link" to="/startscreen">
         Play Again?
       </Link>
     </div>
