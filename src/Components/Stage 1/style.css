@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 .go-link {
   background-color: #00ffc2;
@@ -10,7 +10,7 @@
   padding: 12px;
   font-size: 1em;
   width: 70px;
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
 }
 
 p {
@@ -18,9 +18,19 @@ p {
   margin-top: 0;
   width: 400px;
   text-align: center;
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
 }
 
 input {
-  font-family: "Press Start 2P", cursive;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
 }

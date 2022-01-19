@@ -1,10 +1,26 @@
-import Header from "../Header";
-import { Link } from "react-router-dom";
-import "./style.css";
+import Header from '../Header';
+import { Link } from 'react-router-dom';
+import './style.css';
+import { useState, useEffect } from 'react';
+
+const API_URL = process.env.REACT_APP_API_URL;
 
 // Stage 5 - Mission complete - Launch into the real world - Light speed into another galaxy - Motivational quotes fetched from an API of past bootcampers
 
 function Stage5() {
+  const [quote, setQuote] = useState('');
+  const [name, setName] = useState('');
+
+  useEffect(() => {
+    async function getQuotes() {
+      const response = await fetch(`${API_URL}quotes`);
+      const data = await response.json();
+      setName(data.payload[data.payload.length - 1].name);
+      setQuote(data.payload[data.payload.length - 1].quote);
+    }
+    getQuotes();
+  }, []);
+
   return (
     <div
       className="stage"
@@ -16,6 +32,7 @@ function Stage5() {
       }}
     >
       <Header text="Mission Complete!" />
+      <p>{quote}</p>
       <Link className="play-again-link" to="/">
         Play Again?
       </Link>

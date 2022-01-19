@@ -6,6 +6,8 @@ import InputBox from '../InputBox';
 import StartHeading from '../../Components/StartScreen/StartHeading';
 import './style.css';
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 function Stage1() {
   return (
     <div
@@ -36,51 +38,60 @@ function Stage1() {
         motivates you.
       </p>
 
-      <InputBox
-        placeholder="Team Name"
-        style={{
-          position: 'fixed',
-          bottom: '30vh',
-          backgroundColor: `white`,
-          textAlign: `center`,
-          boxShadow: `2px 2px 4px rgba(47, 47, 47, 0.29)`,
-          borderRadius: `30px`,
-          borderStyle: `none`,
-          margin: `20px`,
-          padding: `12px 50px`,
-          fontSize: `20px`,
-        }}
-      />
-      <InputBox
-        placeholder="Quote"
-        style={{
-          position: 'fixed',
-          bottom: '23vh',
-          backgroundColor: `white`,
-          textAlign: `center`,
-          boxShadow: `2px 2px 4px rgba(47, 47, 47, 0.29)`,
-          borderRadius: `30px`,
-          borderStyle: `none`,
-          margin: `20px`,
-          padding: `12px 50px`,
-          fontSize: `20px`,
-        }}
-      />
+      {/* <form action="http://localhost:3000/scores" method="post">
+      <input type="text" name="name" placeholder="Name">
+      <input type="text" name="quote" placeholder="Score">
+      <button type="submit" class="add">Add</button>
+    </form> */}
+      <form action={`${API_URL}quotes`} method="post">
+        <InputBox
+          name="name"
+          placeholder="Team Name"
+          style={{
+            position: 'fixed',
+            bottom: '30vh',
+            backgroundColor: `white`,
+            textAlign: `center`,
+            boxShadow: `2px 2px 4px rgba(47, 47, 47, 0.29)`,
+            borderRadius: `30px`,
+            borderStyle: `none`,
+            margin: `20px`,
+            padding: `12px 50px`,
+            fontSize: `20px`,
+          }}
+        />
+        <InputBox
+          name="quote"
+          placeholder="Quote"
+          style={{
+            position: 'fixed',
+            bottom: '23vh',
+            backgroundColor: `white`,
+            textAlign: `center`,
+            boxShadow: `2px 2px 4px rgba(47, 47, 47, 0.29)`,
+            borderRadius: `30px`,
+            borderStyle: `none`,
+            margin: `20px`,
+            padding: `12px 50px`,
+            fontSize: `20px`,
+          }}
+        />
 
-      <div style={{ position: 'fixed', left: '10' }}></div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          position: 'fixed',
-          bottom: '18vh',
-          alignItems: 'center',
-        }}
-      >
-        <Link to="/stage2" className="go-link">
-          GO!
-        </Link>
-      </div>
+        <div style={{ position: 'fixed', left: '10' }}></div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            position: 'fixed',
+            bottom: '18vh',
+            alignItems: 'center',
+          }}
+        >
+          <Link type="submit" to="/stage2" className="go-link">
+            GO!
+          </Link>
+        </div>
+      </form>
     </div>
   );
 }
