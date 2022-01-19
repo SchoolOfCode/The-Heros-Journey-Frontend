@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Input from "../Input";
 import Text from "../Text";
 import Padlock from "../Padlock";
-import Sidebar from "../Sidebar";
+import SideNav from "../Sidenav";
 
 // Stage 3 - Imposter Syndrome stage - Hole in the ship Weeks 4-5 Backend Node, SQL
 // stage 3
@@ -39,13 +39,12 @@ function Stage3() {
         backgroundSize: `100vh`,
       }}
     >
-      <Sidebar
-        title="Houston, we have a problem!"
-        description="
-      Getting out of your comfort zone and jumping straight into the unknown is an overwhelming feeling.
-      'What am I doing here?' is a question you may ask yourself as you begin to self-doubt and be filled with intrusive thoughts..."
-        stageDesc="Back-end"
-      />
+      <SideNav 
+        title="Houston, we have a problem!" 
+        description="Getting out of your comfort zone and jumping straight into the unknown is an overwhelming feeling.
+      'What am I doing here?' is a question you may ask yourself as you begin to self-doubt and be filled with intrusive thoughts..." 
+      stageDesc="Back-end"/>
+  
       <Text
         text="INSERT INTO spaceship"
         style={{

@@ -65,7 +65,7 @@ function Stage4() {
         backgroundSize: `100vh`,
       }}
     >
-      <SideNav text="(About this stage), React etc etc" />
+      <SideNav title="(About this stage), React etc etc" description="X" stageDesc="React"/>
       <Click
         text="1"
         handleClick={handleClick}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
 
-function SideNav({ text }) {
+function SideNav({ title, description, stageDesc }) {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
   return (
@@ -9,7 +9,9 @@ function SideNav({ text }) {
       <button className="hamburger" type="button" onClick={showSidebar}>
         <div></div>
       </button>
-      <p>{text}</p>
+      <h1 style={{ fontColor: 'white' }}>{title}</h1>
+      <p style={{ fontColor: 'black', fontSize: '1em', textAlign: 'left' }}>{description}</p>
+      <p style={{ position: 'fixed', bottom: '5vh', fontStyle: 'italic', textAlign: 'left' }}>{stageDesc}</p>
     </nav>
   );
 }

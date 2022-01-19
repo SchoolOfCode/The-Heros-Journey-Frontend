@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Input from '../Input';
 import Popup from '../Popup';
 import Padlock from '../Padlock';
-import Sidebar from '../Sidebar';
+import SideNav from "../Sidenav";
 import { useState } from 'react';
 import './style.css';
 
@@ -60,7 +60,7 @@ function Stage2() {
     >
       {/* <img src="https://i.imgur.com/6BnAjur.png" alt="background" className="stagebg" height="90%" /> */}
 
-      <Sidebar title="The world is your oyster..." description="Every start of a new journey is always exciting... Eyes full of wonder, ready to learn..." stageDesc="VanillaJS" />
+      <SideNav title="The world is your oyster..." description="Every start of a new journey is always exciting... Eyes full of wonder, ready to learn..." stageDesc="VanillaJS" />
 
       {/* Pop-up 1 */}
       <input type="button" value="test" onClick={togglePopup1}
