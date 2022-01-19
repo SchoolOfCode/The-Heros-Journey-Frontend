@@ -8,9 +8,10 @@ function Stage5() {
     <div
       className="stage"
       style={{
-        backgroundImage: `url("https://cdn.pixabay.com/photo/2018/03/26/14/07/space-3262811_960_720.jpg")`,
+        backgroundImage: `url("https://i.imgur.com/0u8nK7w.png")`,
         backgroundRepeat: `no-repeat`,
-        backgroundSize: `100vw 100vh`,
+        backgroundPosition: `center`,
+        backgroundSize: `100vh`,
       }}
     >
       <Header text="Mission Complete!" />
