@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 // Stage 1 - Application Stage - Main Menu of game - Typing name, (Saving state), List Info about school of code - Coding experience? Employment Statistics?
 
 import InputBox from "../InputBox";
+import Text from "../Text";
 import StartHeading from "../../Components/StartScreen/StartHeading";
 import "./style.css";
 
@@ -15,6 +16,8 @@ function Stage1() {
         backgroundRepeat: `no-repeat`,
         backgroundSize: `100vh`,
         backgroundPosition: "center",
+        display: `flex`,
+        flexDirection: `column`
       }}
     >
       <StartHeading
@@ -31,9 +34,20 @@ function Stage1() {
       >
         This game represents the School of Code journey. You'll go through the
         stages solving coding challanges. Each level respresents a different
-        stage of your coding journey! Please enter a team name and a quote that
+        stage of your coding journey! 
+
+        Please enter a team name and a quote that
         motivates you.
       </p>
+      <InputBox 
+          placeholder="Team Name" 
+          style={{ position: `fixed`,
+          bottom: `25vh`}}
+          />
+        <InputBox placeholder="Quote" 
+          style={{ position: `fixed`,
+          bottom: `30vh`}}
+        />
       <div
         style={{
           display: "flex",
@@ -41,11 +55,13 @@ function Stage1() {
           position: "fixed",
           bottom: "20vh",
           alignItems: "center",
+          
         }}
       >
-        <InputBox placeholder="Team Name" />
-        <InputBox placeholder="Quote" />
-        <Link to="/stage2" className="go-link" style={{ color: "black" }}>
+        <Link
+          to="/stage2"
+          className="go-link"
+        >
           GO!
         </Link>
       </div>

@@ -49,49 +49,56 @@ function Stage3() {
       <Text
         text="INSERT INTO spaceship"
         style={{
-          position: "fixed",
-          bottom: "45vh",
-          left: "29.5vw",
+
+          position: 'fixed',
+          top: '25vh',
+          left: '32vw',
           opacity: 1,
-          fontSize: "1.3vh",
-          fontWeight: "bold",
-          color: "white",
+          fontSize: '2vh',
+          fontWeight: 'bold',
+          color: 'white',
+
         }}
       />
       <Text
         text="(SQL)"
         style={{
-          position: "fixed",
-          bottom: "43vh",
-          left: "32.5vw",
+
+          position: 'fixed',
+          top: '28vh',
+          left: '34vw',
           opacity: 1,
-          fontSize: "1.3vh",
-          fontWeight: "bold",
-          color: "white",
+          fontSize: '2vh',
+          fontWeight: 'bold',
+          color: 'white',
+
         }}
       />
       <Text
         text="($1, $2) RETURNING"
         style={{
-          position: "fixed",
-          bottom: "45vh",
-          right: "30vw",
+
+          position: 'fixed',
+          bottom: '25vh',
+          right: '30vw',
           opacity: 1,
-          fontSize: "1.3vh",
-          fontWeight: "bold",
-          color: "white",
+          fontSize: '2vh',
+          fontWeight: 'bold',
+          color: 'white',
         }}
       />
       <Text
         text="password"
         style={{
-          position: "fixed",
-          bottom: "43vh",
-          right: "32vw",
+
+          position: 'fixed',
+          bottom: '23vh',
+          right: '32vw',
           opacity: 1,
-          fontSize: "1.3vh",
-          fontWeight: "bold",
-          color: "white",
+          fontSize: '2vh',
+          fontWeight: 'bold',
+          color: 'white',
+
         }}
       />
       <Input
