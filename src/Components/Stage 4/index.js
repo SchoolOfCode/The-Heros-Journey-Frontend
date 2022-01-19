@@ -1,53 +1,56 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import Click from '../Click';
-import Input from '../Input';
-import Sidebar from '../Sidebar';
-import Padlock from '../Padlock';
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Click from "../Click";
+import Input from "../Input";
+import Padlock from "../Padlock";
+import SideNav from "../Sidenav";
 
 // Stage 4 - Heroes journey - transformative - Floating in space Weeks 7-8 React
 
 function Stage4() {
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState("");
 
-  const [link, setLink] = useState('/stage4');
+  const [link, setLink] = useState("/stage4");
 
   useEffect(() => {
     console.log(
-      'I wonder what happens if I click around a bit and USE some of these objects...'
+      "I wonder what happens if I click around a bit and USE some of these objects..."
     );
   }, []);
 
   function handleChange(e) {
     setPassword(e.target.value);
-    if (e.target.value.toLowerCase() === 'hooks') {
-      setLink('/stage5');
+    if (e.target.value.toLowerCase() === "hooks") {
+      setLink("/stage5");
     } else {
-      setLink('/stage4');
+      setLink("/stage4");
     }
   }
 
   function submit() {
-    if (password.toLowerCase() !== 'hooks') {
-      return alert('Access Denied');
+    if (password.toLowerCase() !== "hooks") {
+      return alert("Access Denied");
     } else {
-      alert('Permission granted');
+      alert("Permission granted");
     }
   }
 
   function handleClick(text) {
     switch (text) {
-      case '1':
-        console.log('useBox');
+      case "1":
+        console.log("useQuestionMark");
         break;
-      case '2':
-        console.log('useCamera');
+      case "2":
+        console.log("useHelmet");
         break;
-      case '3':
-        console.log('useChair');
+      case "3":
+        console.log("usePlanet");
         break;
-      case '4':
-        console.log('useWindow');
+      case "4":
+        console.log("useComet");
+      case "5":
+        console.log("useSuperhero");
+        break;
       default:
     }
   }
@@ -62,42 +65,86 @@ function Stage4() {
         backgroundSize: `100vh`,
       }}
     >
-      <Sidebar title="Crossing the threshold..." description="
-      X" stageDesc="React"/>
+      <SideNav text="(About this stage), React etc etc" />
       <Click
         text="1"
         handleClick={handleClick}
-        style={{ position: 'fixed', bottom: '43vh', left: '7vw', opacity: 1 }}
+        style={{
+          position: "fixed",
+          top: "28.5vh",
+          left: "27.5vw",
+          height: "9vh",
+          width: "5vh",
+          cursor: "pointer",
+          opacity: 0,
+        }}
       />
       <Click
         text="2"
         handleClick={handleClick}
-        style={{ position: 'fixed', top: '23vh', right: '24vw', opacity: 1 }}
+        style={{
+          position: "fixed",
+          top: "40vh",
+          left: "31vw",
+          height: "12vh",
+          width: "10vh",
+          cursor: "pointer",
+          opacity: 0,
+        }}
       />
       <Click
         text="3"
         handleClick={handleClick}
-        style={{ position: 'fixed', bottom: '38vh', right: '32vw', opacity: 1 }}
+        style={{
+          position: "fixed",
+          bottom: "11vh",
+          right: "36vw",
+          height: "15vh",
+          width: "22vh",
+          borderRadius: "150px 150px 150px 1px",
+          cursor: "pointer",
+          opacity: 0,
+        }}
       />
       <Click
         text="4"
         handleClick={handleClick}
-        style={{ position: 'fixed', top: '47vh', right: '49vw', opacity: 1 }}
+        style={{
+          position: "fixed",
+          top: "45vh",
+          right: "40vw",
+          height: "10vh",
+          width: "11vh",
+          transform: "skew(50deg)",
+          opacity: 0,
+          cursor: "pointer",
+        }}
       />
-
+      <Click
+        text="5"
+        handleClick={handleClick}
+        style={{
+          position: "fixed",
+          top: "10vh",
+          right: "35vw",
+          height: "20vh",
+          width: "25vh",
+          transform: "skew(60deg)",
+          cursor: "pointer",
+          opacity: 0,
+        }}
+      />
       <Input
         placeholder="Password"
         handleChange={handleChange}
-        style={{ position: 'fixed', bottom: '8vh', right: '15vh'}}
+        style={{ position: "fixed", bottom: "8vh", right: "15vh" }}
       />
-      <Link
-        onClick={submit}
-        to={link}
-      >
+      <Link onClick={submit} to={link}>
         <Padlock />
       </Link>
-      <p
-        style={{ position: 'fixed', bottom: '10vh', right: '20vh'}}>Hint: Console</p>
+      <p style={{ position: "fixed", bottom: "10vh", right: "20vh" }}>
+        Hint: Console
+      </p>
     </div>
   );
 }

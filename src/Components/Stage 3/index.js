@@ -1,31 +1,31 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Input from '../Input';
-import Text from '../Text';
-import Padlock from '../Padlock';
-import Sidebar from '../Sidebar';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import Input from "../Input";
+import Text from "../Text";
+import Padlock from "../Padlock";
+import Sidebar from "../Sidebar";
 
 // Stage 3 - Imposter Syndrome stage - Hole in the ship Weeks 4-5 Backend Node, SQL
 // stage 3
 
 function Stage3() {
-  const [password, setPassword] = useState('');
-  const [link, setLink] = useState('/stage3');
+  const [password, setPassword] = useState("");
+  const [link, setLink] = useState("/stage3");
 
   function handleChange(e) {
     setPassword(e.target.value);
-    if (e.target.value === 'VALUES') {
-      setLink('/stage4');
+    if (e.target.value === "VALUES") {
+      setLink("/stage4");
     } else {
-      setLink('/stage3');
+      setLink("/stage3");
     }
   }
 
   function submit() {
-    if (password !== 'VALUES') {
-      return alert('Access Denied');
+    if (password !== "VALUES") {
+      return alert("Access Denied");
     } else {
-      alert('Permission granted');
+      alert("Permission granted");
     }
   }
 
@@ -39,66 +39,68 @@ function Stage3() {
         backgroundSize: `100vh`,
       }}
     >
-      <Sidebar title="Houston, we have a problem!" description="
+      <Sidebar
+        title="Houston, we have a problem!"
+        description="
       Getting out of your comfort zone and jumping straight into the unknown is an overwhelming feeling.
-      'What am I doing here?' is a question you may ask yourself as you begin to self-doubt and be filled with intrusive thoughts..." stageDesc="Back-end"/>
+      'What am I doing here?' is a question you may ask yourself as you begin to self-doubt and be filled with intrusive thoughts..."
+        stageDesc="Back-end"
+      />
       <Text
         text="INSERT INTO spaceship"
         style={{
-          position: 'fixed',
-          bottom: '45vh',
-          left: '29.5vw',
+          position: "fixed",
+          bottom: "45vh",
+          left: "29.5vw",
           opacity: 1,
-          fontSize: '1.3vh',
-          fontWeight: 'bold',
-          color: 'white',
+          fontSize: "1.3vh",
+          fontWeight: "bold",
+          color: "white",
         }}
       />
       <Text
         text="(SQL)"
         style={{
-          position: 'fixed',
-          bottom: '43vh',
-          left: '32.5vw',
+          position: "fixed",
+          bottom: "43vh",
+          left: "32.5vw",
           opacity: 1,
-          fontSize: '1.3vh',
-          fontWeight: 'bold',
-          color: 'white',
+          fontSize: "1.3vh",
+          fontWeight: "bold",
+          color: "white",
         }}
       />
       <Text
         text="($1, $2) RETURNING"
         style={{
-          position: 'fixed',
-          bottom: '45vh',
-          right: '30vw',
+          position: "fixed",
+          bottom: "45vh",
+          right: "30vw",
           opacity: 1,
-          fontSize: '1.3vh',
-          fontWeight: 'bold',
-          color: 'white',
+          fontSize: "1.3vh",
+          fontWeight: "bold",
+          color: "white",
         }}
       />
       <Text
         text="password"
         style={{
-          position: 'fixed',
-          bottom: '43vh',
-          right: '32vw',
+          position: "fixed",
+          bottom: "43vh",
+          right: "32vw",
           opacity: 1,
-          fontSize: '1.3vh',
-          fontWeight: 'bold',
-          color: 'white',
+          fontSize: "1.3vh",
+          fontWeight: "bold",
+          color: "white",
         }}
       />
-      <Input 
-        placeholder="Password" 
-        handleChange={handleChange} 
-        style={{ position: 'fixed', bottom: '8vh', right: '15vh'}} 
+      <Input
+        placeholder="Password"
+        handleChange={handleChange}
+        style={{ position: "fixed", bottom: "8vh", right: "15vh" }}
       />
-      <Link 
-        onClick={submit} 
-        to={link}>
-          <Padlock />
+      <Link onClick={submit} to={link}>
+        <Padlock />
       </Link>
     </div>
   );
