@@ -34,7 +34,7 @@ function Stage5() {
       <Header text="Mission Complete!" />
       <p>{quote}</p>
       <Link className="play-again-link" to="/">
-        Play Again?
+        Play Again {name}?
       </Link>
     </div>
   );
