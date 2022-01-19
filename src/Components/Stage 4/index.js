@@ -67,22 +67,22 @@ function Stage4() {
       <Click
         text="1"
         handleClick={handleClick}
-        style={{ position: 'fixed', bottom: '43vh', left: '7vw', opacity: 0 }}
+        style={{ position: 'fixed', bottom: '43vh', left: '7vw', opacity: 1 }}
       />
       <Click
         text="2"
         handleClick={handleClick}
-        style={{ position: 'fixed', top: '23vh', right: '24vw', opacity: 0 }}
+        style={{ position: 'fixed', top: '23vh', right: '24vw', opacity: 1 }}
       />
       <Click
         text="3"
         handleClick={handleClick}
-        style={{ position: 'fixed', bottom: '38vh', right: '32vw', opacity: 0 }}
+        style={{ position: 'fixed', bottom: '38vh', right: '32vw', opacity: 1 }}
       />
       <Click
         text="4"
         handleClick={handleClick}
-        style={{ position: 'fixed', top: '47vh', right: '49vw', opacity: 0 }}
+        style={{ position: 'fixed', top: '47vh', right: '49vw', opacity: 1 }}
       />
 
       <Input
