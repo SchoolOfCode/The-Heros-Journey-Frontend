@@ -63,8 +63,8 @@ function Stage2() {
       <SideNav title="The world is your oyster..." description="Every start of a new journey is always exciting... Eyes full of wonder, ready to learn..." stageDesc="VanillaJS" />
 
       {/* Pop-up 1 */}
-      <input type="button" value="test" onClick={togglePopup1}
-        style={{ position: 'fixed', top: '35vh', left: '47.5vw', opacity: 1, width: '35wh', height: '10vh', fontSize: '2vh' }}
+      <input type="button" onClick={togglePopup1}
+        style={{ position: 'fixed', top: '35vh', left: '47.5vw', opacity: 0.5, width: '35wh', height: '10vh', fontSize: '2vh' }}
       />
       {isOpen1 && ( <Popup content={
             <>
@@ -77,7 +77,7 @@ function Stage2() {
 
       {/* Pop-up 2 */}
       <input type="button" onClick={togglePopup2}
-        style={{ position: 'fixed', top: '14.5vh', left: '30.5vw', opacity: 0.5, width: '50wh', height: '7vh' }}
+        style={{ position: 'fixed', top: '14.5vh', left: '18vh', opacity: 0.5, width: '5vw', height: '7vh' }}
       />
       {isOpen2 && ( <Popup content={
             <>
