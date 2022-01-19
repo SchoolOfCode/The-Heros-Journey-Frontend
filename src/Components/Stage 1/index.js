@@ -29,7 +29,6 @@ function Stage1() {
           color: "white",
           position: "fixed",
           top: "30vh",
-          fontSize: "2.7vh",
         }}
       >
         This game represents the School of Code journey. You'll go through the

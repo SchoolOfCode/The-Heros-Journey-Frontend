@@ -1,5 +1,6 @@
-import Header from '../Header';
-import { Link } from 'react-router-dom';
+import Header from "../Header";
+import { Link } from "react-router-dom";
+import "./style.css";
 
 // Stage 5 - Mission complete - Launch into the real world - Light speed into another galaxy - Motivational quotes fetched from an API of past bootcampers
 
@@ -15,7 +16,9 @@ function Stage5() {
       }}
     >
       <Header text="Mission Complete!" />
-      <Link to="/stage1">Play Again?</Link>
+      <Link className="play-again-link" to="/stage1">
+        Play Again?
+      </Link>
     </div>
   );
 }

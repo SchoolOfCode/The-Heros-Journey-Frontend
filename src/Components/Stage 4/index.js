@@ -65,7 +65,11 @@ function Stage4() {
         backgroundSize: `100vh`,
       }}
     >
-      <SideNav title="(About this stage), React etc etc" description="X" stageDesc="React"/>
+      <SideNav
+        title="(About this stage), React etc etc"
+        description="X"
+        stageDesc="React"
+      />
       <Click
         text="1"
         handleClick={handleClick}
@@ -142,7 +146,7 @@ function Stage4() {
       <Link onClick={submit} to={link}>
         <Padlock />
       </Link>
-      <p style={{ position: "fixed", bottom: "10vh", right: "20vh" }}>
+      <p style={{ position: "fixed", bottom: "10vh", right: "10vh" }}>
         Hint: Console
       </p>
     </div>
