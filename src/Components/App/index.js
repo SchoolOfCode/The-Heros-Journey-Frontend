@@ -18,7 +18,7 @@ function App() {
       }}
     >
       <Routes>
-        <Route path="startscreen" element={<StartScreen />} />
+        <Route path="/" element={<StartScreen />} />
         <Route path="howtoplay" element={<HowToPlay />} />
         <Route path="stage1" element={<Stage1 />} />
         <Route path="stage2" element={<Stage2 />} />
