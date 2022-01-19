@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import Input from '../Input';
 import Header from '../Header';
 import Text from '../Text';
+import Padlock from '../Padlock';
+import Sidebar from '../Sidebar';
+
 // Stage 3 - Imposter Syndrome stage - Hole in the ship Weeks 4-5 Backend Node, SQL
 // stage 3
 
@@ -38,6 +41,7 @@ function Stage3() {
         backgroundSize: `100vh`,
       }}
     >
+      <Sidebar title="Imposter!" description="Imposter Syndrome..." />
       <Header text="Hole in the spaceship" />
       <Input placeholder="Password" handleChange={handleChange} />
       <Link onClick={submit} to={link}>
@@ -91,6 +95,7 @@ function Stage3() {
           color: 'white',
         }}
       />
+      <Padlock />
     </div>
   );
 }

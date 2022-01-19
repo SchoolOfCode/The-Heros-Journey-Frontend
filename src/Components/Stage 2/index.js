@@ -1,30 +1,13 @@
 import { Link } from 'react-router-dom';
 
 import Input from '../Input';
-
 import Popup from '../Popup';
+import Padlock from '../Padlock';
+import Sidebar from '../Sidebar';
 import { useState } from 'react';
 import './style.css';
 
 // Stage 2 - Start of the journey - Excited - Space Bedroom - Weeks 1-3 Vanilla JS
-
-// The hints that the user(s) have to solve - the answer for the questions will be the password.
-// Later in the week: to solve the password, users will be given code to solve, i.e. iterating through an array to get a letter from the password
-// PASSWORD: Done
-
-// Functionality
-// Event listeners - onclick Done
-// Pop-up windows when clicked will show a hint, i.e. "splice, map, forEach" or a message, i.e. "Nothing." - DONE
-
-// Create a button.
-// Create an event listener with the button (onclick).Done
-// When onclick, it will have a pop-up . Done
-//Create content of the por-up window Done
-// Style the button to be transparent.
-
-// What next
-//Create an introduction that tells the user how to get the password
-//create problems for each pop up box
 
 function Stage2() {
   const [isOpen1, setIsOpen1] = useState(false);
@@ -32,7 +15,6 @@ function Stage2() {
   const [isOpen3, setIsOpen3] = useState(false);
   const [password, setPassword] = useState('');
   const [link, setLink] = useState('/stage2');
-  const [intro, setIntro] = useState(false);
 
   function handleChange(e) {
     setPassword(e.target.value);
@@ -65,10 +47,6 @@ function Stage2() {
     setIsOpen3(!isOpen3);
   };
 
-  const introBox = () => {
-    setIntro(!intro);
-  };
-
   return (
     <div
       className="stage"
@@ -79,34 +57,13 @@ function Stage2() {
         backgroundSize: `100vh`,
       }}
     >
+      <Sidebar title='Start of the Journey' description='Eyes full of wonder' />
+
       <h1>Stage 2</h1>
       <Input placeholder="Password" handleChange={handleChange} />
       <Link onClick={submit} to={link}>
         Enter
       </Link>
-      {/* <Link to="/stage3">Stage 3</Link> */}
-
-      {/* This button can be the intro button - tells user what to do? / the aim */}
-      <input
-        style={{ position: 'fixed', bottom: '30vh' }}
-        type="button"
-        value="Hints"
-        onClick={introBox}
-      />
-      {intro && (
-        <Popup
-          content={
-            <>
-              <h1 className="stage1Header">
-                Hello Welcome to the start of your hero journey.
-              </h1>
-              <p>On this level you will be exploring Vanila.js</p>
-              <p>Click around to find hints for the password</p>
-            </>
-          }
-          handleClose={introBox}
-        />
-      )}
 
       {/* Pop-up 1 */}
       <input
@@ -139,7 +96,6 @@ function Stage2() {
           content={
             <>
               <b>var</b>
-              {/* <p>Hint 2</p> */}
             </>
           }
           handleClose={togglePopup2}
@@ -158,12 +114,12 @@ function Stage2() {
           content={
             <>
               <b>const</b>
-              {/* <p>Hint 3</p> */}
             </>
           }
           handleClose={togglePopup3}
         />
-      )}
+      )};
+      <Padlock />
     </div>
   );
 }
