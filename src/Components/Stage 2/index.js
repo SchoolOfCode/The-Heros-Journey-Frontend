@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Input from '../Input';
 import Popup from '../Popup';
 import Padlock from '../Padlock';
-import SideNav from "../Sidenav";
+import SideNav from '../Sidenav';
 import { useState } from 'react';
 import './style.css';
 
@@ -47,7 +47,6 @@ function Stage2() {
     setIsOpen3(!isOpen3);
   };
 
-
   return (
     <div
       className="stage"
@@ -59,56 +58,93 @@ function Stage2() {
       }}
     >
       {/* <img src="https://i.imgur.com/6BnAjur.png" alt="background" className="stagebg" height="90%" /> */}
-
-      <SideNav title="The world is your oyster..." description="Every start of a new journey is always exciting... Eyes full of wonder, ready to learn..." stageDesc="VanillaJS" />
-
-      {/* Pop-up 1 */}
-      <input type="button" onClick={togglePopup1}
-        style={{ position: 'fixed', top: '35vh', left: '47.5vw', opacity: 0.5, width: '35wh', height: '10vh', fontSize: '2vh' }}
+      <SideNav
+        title="The world is your oyster..."
+        description="Every start of a new journey is always exciting... Eyes full of wonder, ready to learn..."
+        stageDesc="VanillaJS"
       />
-      {isOpen1 && ( <Popup content={
+      {/* Pop-up 1 */}
+      <input
+        type="button"
+        onClick={togglePopup1}
+        style={{
+          position: 'fixed',
+          top: '35vh',
+          marginRight: '5vh',
+          opacity: 0,
+          width: '35wh',
+          height: '10vh',
+          fontSize: '2vh',
+          transform: 'rotate(25deg)',
+        }}
+      />
+      {isOpen1 && (
+        <Popup
+          content={
             <>
-              <b>let</b>
+              <b>Let this pencil guide me to the next stage...</b>
             </>
           }
           handleClose={togglePopup1}
         />
       )}
-
       {/* Pop-up 2 */}
-      <input type="button" onClick={togglePopup2}
-        style={{ position: 'fixed', top: '14.5vh', left: '18vh', opacity: 0.5, width: '5vw', height: '7vh' }}
+      <input
+        type="button"
+        onClick={togglePopup2}
+        style={{
+          position: 'fixed',
+          top: '13.5vh',
+          marginRight: '72.1vh',
+          opacity: 0,
+          width: '4vh',
+          height: '9vh',
+          transform: 'rotate(45deg)',
+          borderRadius: '30%',
+        }}
       />
-      {isOpen2 && ( <Popup content={
+      {isOpen2 && (
+        <Popup
+          content={
             <>
-              <b>var</b>
+              <b>VA Rubber...</b>
             </>
           }
           handleClose={togglePopup2}
         />
       )}
-
       {/* Pop-up 3 */}
-      <input type="button" onClick={togglePopup3}
-        style={{ position: 'fixed', top: '11vh', right: '33.3vw', opacity: 0.5, width: '6vw', height: '12vh' }}
+      <input
+        type="button"
+        onClick={togglePopup3}
+        style={{
+          position: 'fixed',
+          top: '11vh',
+          marginLeft: '54vh',
+          opacity: 0,
+          width: '13vh',
+          height: '13vh',
+          borderRadius: '50%',
+        }}
       />
-      {isOpen3 && ( <Popup content={
+      {isOpen3 && (
+        <Popup
+          content={
             <>
-              <b>const</b>
+              <b>The earths spin is constant...</b>
             </>
           }
           handleClose={togglePopup3}
         />
-      )};
-      <Input 
-        placeholder="Password" 
-        handleChange={handleChange} 
-        style={{ position: 'fixed', bottom: '8vh', right: '15vh'}} 
+      )}
+      ;
+      <Input
+        placeholder="Password"
+        handleChange={handleChange}
+        style={{ position: 'fixed', bottom: '8vh', right: '15vh' }}
       />
-      <Link 
-        onClick={submit} 
-        to={link}>
-          <Padlock />
+      <Link onClick={submit} to={link}>
+        <Padlock />
       </Link>
     </div>
   );
