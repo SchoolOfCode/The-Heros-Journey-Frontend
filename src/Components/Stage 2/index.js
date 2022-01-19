@@ -73,9 +73,10 @@ function Stage2() {
     <div
       className="stage"
       style={{
-        backgroundImage: `url("https://media.istockphoto.com/vectors/spaceship-cabin-interior-space-background-with-planets-earth-and-moon-vector-id1128729226?k=20&m=1128729226&s=612x612&w=0&h=IpddtxPsMgv5GlYzprDRC49tO3UZ_fDm41muAw9zaGU=")`,
+        backgroundImage: `url("https://i.imgur.com/6BnAjur.png")`,
         backgroundRepeat: `no-repeat`,
-        backgroundSize: `100vw 100vh`,
+        backgroundPosition: `center`,
+        backgroundSize: `100vh`,
       }}
     >
       <h1>Stage 2</h1>

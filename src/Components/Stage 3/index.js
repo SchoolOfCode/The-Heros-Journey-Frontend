@@ -32,9 +32,10 @@ function Stage3() {
     <div
       className="stage"
       style={{
-        backgroundImage: `url("https://media.istockphoto.com/vectors/spaceship-cockpit-interior-space-and-planets-view-vector-id1208978034?k=20&m=1208978034&s=612x612&w=0&h=dAOScftuKesONgfb2q4equDR__kTe-UsIk_OmCcvMQk=")`,
+        backgroundImage: `url("https://i.imgur.com/P04KXRQ.png")`,
         backgroundRepeat: `no-repeat`,
-        backgroundSize: `100vw 100vh`,
+        backgroundPosition: `center`,
+        backgroundSize: `100vh`,
       }}
     >
       <Header text="Hole in the spaceship" />
