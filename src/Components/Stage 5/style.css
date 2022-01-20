@@ -1,22 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 .play-again-link {
+  position: relative;
+  font-family: "Press Start 2P", cursive;
+  text-decoration: none;
+  color: black;
   background-color: #00ffc2;
   text-align: center;
   box-shadow: 2px 2px 4px rgba(47, 47, 47, 0.29);
   border-radius: 30px;
   border-style: none;
-  padding: 12px;
-  font-size: 0.8rem;
+  margin: 1vh;
+  padding: 1.2vh 2.5vw;
+  font-size: 1.5vh;
   width: auto;
-  font-family: "Press Start 2P", cursive;
-  text-decoration: none;
 }
 
 .end-page {
   padding: 10px;
-  font-size: 0.9em;
-  line-height: 1.2em;
+  font-size: 1.5vh;
+  line-height: 1.6vh;
   color: white;
   background-color: rgba(4, 41, 79, 0.7);
+  border-radius: 30px;
+}
+
+.team-input {
+  padding: 10px;
+  font-size: 1.5vh;
+  line-height: 1.6vh;
+  color: #00ffc2;
+  background-color: rgba(0, 0, 0, 0.445);
+  border-radius: 30px;
 }

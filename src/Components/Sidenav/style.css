@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 .sidebar {
   position: fixed;
@@ -14,29 +15,32 @@
   left: 0;
 }
 
-.sidebar h1 {
-  color: white;
-  margin: 20px;
-}
-
 .sidebar p {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Outfit', sans-serif;
   display: block;
   color: black;
   word-wrap: inherit;
   margin: 10px;
-  padding: 10px;
+  padding: 15px;
   width: 250px;
   text-align: left;
 }
 
-.about-stage{
-  font-size: 1rem;
+.sidebar h2 {
+  color: white;
+  margin: 20px;
+  font-size: 4vh;
+  font-family: "Press Start 2P", cursive;
+  word-wrap: inherit;
+}
+
+.about-stage {
+  font-size: 3vh;
 }
 
 .topics {
   font-style: italic;
-  font-size: 0.8em;
+  font-size: 2vh;
 }
 
 .menu-icon {

@@ -13,38 +13,43 @@ function HowToPlay() {
         backgroundPosition: "center",
       }}
     >
+    <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          position: "fixed",
+          top: "10vh",
+        }}
+      >
       <StartHeading
         text="How To Play"
         style={{ 
-          fontSize: "8vh", 
           position: "fixed", 
-          top: "10vh" }}
+          top: "12vh" }}
       />
       <p style={{ 
         color: "white",
-        lineHeight: "1.2em",
-        padding: "10px",
+        lineHeight: "2.2vh",
+        width: "30vw",
         position: "fixed", 
-        top: "40vh" }}>
+        top: "42vh" }}>
+
       This is a point-and-click game, in each room you will have to look and click around to gather hints of the password to progress onto the next stage.
       
       Work together as a team and support each other throughout this journey!
       </p>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          position: "fixed",
-          bottom: "20vh",
-        }}
-      >
-        <Link
+
+      <Link
           to="/"
-          className="go-link"
-          style={{ color: "black", width: "150px", textDecoration: "none" }}
+          className="menuLink"
+          style={{ 
+            position: "fixed", 
+            bottom: "18vh"}}
         >
           GO BACK
         </Link>
+
       </div>
     </div>
   );

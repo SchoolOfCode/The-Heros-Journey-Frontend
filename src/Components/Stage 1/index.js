@@ -42,9 +42,20 @@ function Stage1() {
         flexDirection: `column`,
       }}
     >
+     <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            position: "fixed",
+            bottom: "17vh",
+            alignItems: "center",
+          }}
+        >
       <StartHeading
         text="About"
-        style={{ fontSize: "10vh", position: "fixed", top: "15vh" }}
+        style={{ 
+          position: "fixed", 
+          top: "15vh" }}
       />
       <p
         style={{
@@ -68,6 +79,7 @@ function Stage1() {
           style={{
             position: "fixed",
             bottom: "32vh",
+            height: "4vh",
           }}
         />
         <Input
@@ -76,18 +88,11 @@ function Stage1() {
           placeholder="Quote"
           style={{
             position: "fixed",
-            bottom: "27vh",
+            bottom: "25vh",
+            height: "4vh",
           }}
         />
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            position: "fixed",
-            bottom: "18vh",
-            alignItems: "center",
-          }}
-        >
+
           <Link
             onClick={handleSubmit}
             to="/start-of-the-journey"
@@ -95,8 +100,8 @@ function Stage1() {
           >
             Go!
           </Link>
-        </div>
       </form>
+    </div>
     </div>
   );
 }

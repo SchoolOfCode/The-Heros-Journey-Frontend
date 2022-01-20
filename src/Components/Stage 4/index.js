@@ -146,6 +146,12 @@ function Stage4() {
           opacity: 0,
         }}
       />
+      <p style={{ 
+        position: "fixed", 
+        bottom: "10vh", 
+        right: "10vh" }}>
+        Hint: Console
+      </p>
       <Input
         placeholder="Password"
         handleChange={handleChange}
@@ -154,9 +160,6 @@ function Stage4() {
       <Link onClick={submit} to={link}>
         <Padlock />
       </Link>
-      <p style={{ position: "fixed", bottom: "10vh", right: "10vh" }}>
-        Hint: Console
-      </p>
     </div>
   );
 }
