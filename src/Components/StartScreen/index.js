@@ -13,7 +13,6 @@ function StartScreen() {
         backgroundPosition: "center",
       }}
     >
-      <StartHeading text="The Hero's Journey" />
       <div
         style={{
           display: "flex",
@@ -23,26 +22,16 @@ function StartScreen() {
           alignItems: "center",
         }}
       >
+      <StartHeading text="The Hero's Journey" />
         <Link
           to="/about"
           className="menuLink"
-          style={{
-            color: "black",
-            backgroundColor: "#00ffc2",
-            textDecoration: "none",
-          }}
         >
           BEGIN
         </Link>
         <Link
           to="/how-to-play"
           className="menuLink"
-          style={{
-            color: "black",
-            backgroundColor: "#00ffc2",
-            width: "150px",
-            textDecoration: "none",
-          }}
         >
           HOW TO PLAY
         </Link>

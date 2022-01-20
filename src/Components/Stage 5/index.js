@@ -37,8 +37,9 @@ function Stage5() {
       </p>
 
       <p className="end-page">
-        Remember these words you told yourself at the beginning: {quote}
-      </p>
+        Remember these words you told yourself at the beginning:</p>
+        
+      <p className="end-page"> {quote}</p>
 
       <p className="end-page">
         You should be proud of how far you’ve come, and it can only go upwards

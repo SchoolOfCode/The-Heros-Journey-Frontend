@@ -9,20 +9,9 @@ function SideNav({ title, description, stageDesc }) {
       <button className="menu-icon" type="button" onClick={showSidebar}>
         <div></div>
       </button>
-      <h1 style={{ fontColor: "white", margin: "20px" }}>{title}</h1>
-      <p style={{ fontColor: "black", textAlign: "left" }}>{description}</p>
-
-      <p
-        style={{
-          fontStyle: "italic",
-          textAlign: "left",
-          position: "relative",
-          top: "300px",
-          overflow: "scroll",
-        }}
-      >
-        {stageDesc}
-      </p>
+      <h1>{title}</h1>
+      <p className="about-stage">{description}</p>
+      <p className="topics">{stageDesc}</p>
     </nav>
   );
 }

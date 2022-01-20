@@ -15,13 +15,20 @@ function HowToPlay() {
     >
       <StartHeading
         text="How To Play"
-        style={{ fontSize: "10vh", position: "fixed", top: "10vh" }}
+        style={{ 
+          fontSize: "8vh", 
+          position: "fixed", 
+          top: "10vh" }}
       />
-      <p style={{ color: "white" }}>
+      <p style={{ 
+        color: "white",
+        lineHeight: "1.2em",
+        padding: "10px",
+        position: "fixed", 
+        top: "40vh" }}>
       This is a point-and-click game, in each room you will have to look and click around to gather hints of the password to progress onto the next stage.
       
       Work together as a team and support each other throughout this journey!
-
       </p>
       <div
         style={{
