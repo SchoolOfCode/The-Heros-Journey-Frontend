@@ -86,7 +86,7 @@ function Stage3() {
         style={{ position: `fixed`, bottom: `30vh`, left: `30vh` }}
         content={
             <>
-              <b>IMPOSTER!</b>
+              IMPOSTER!
             </>
           } 
         handleClose={toggleAlert1}
@@ -97,7 +97,7 @@ function Stage3() {
         style={{ position: `fixed`, bottom: `80vh`, right: `40vh` }}
         content={
             <>
-              <b>I'M AN IMPOSTER!</b>
+              I'M AN IMPOSTER!
             </>
           } 
         handleClose={toggleAlert2}
@@ -108,7 +108,7 @@ function Stage3() {
         style={{ position: `fixed`, bottom: `20vh`, right: `45vh` }}
         content={
             <>
-              <b>YOU'RE AN IMPOSTER!</b>
+              YOU'RE AN IMPOSTER!
             </>
           } 
         handleClose={toggleAlert3}
@@ -119,7 +119,7 @@ function Stage3() {
         style={{ position: `fixed`, top: `20vh`, left: `20vh` }}
         content={
             <>
-              <b>HELP!</b>
+              HELP!
             </>
           } 
         handleClose={toggleAlert4}
@@ -130,7 +130,7 @@ function Stage3() {
         style={{ position: `fixed`, top: `45vh`, left: `80vh` }}
         content={
             <>
-              <b>WE ARE IMPOSTERS!</b>
+              WE ARE IMPOSTERS!
             </>
           } 
         handleClose={toggleAlert5}
@@ -141,7 +141,7 @@ function Stage3() {
         style={{ position: `fixed`, top: `30vh`, left: `50vh` }}
         content={
             <>
-              <b>AM I AN IMPOSTER?</b>
+              AM I AN IMPOSTER?
             </>
           } 
         handleClose={toggleAlert6}

@@ -1,34 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-@keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
-
-.alert {
+popup-box {
+    /* position: fixed; */
     width: auto;
     height: auto;
+    /* top: 0;
+    left: 0; */
   }
   
-.alert-box {
-    animation: fadeIn 2s;
-    background: #FF3A00;
+  .box {
+    background: #ffffff;
+    width: auto;
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0px 0px 4px rgb(77, 77, 77);
     font-size: 0.8em;
     font-family: "Press Start 2P", cursive;
     line-height: 1em;
-    z-index: 1;
   }
   
-.close-alert {
+  .close-icon {
     content: 'X';
     cursor: pointer;
     position: relative;
-    background: white;
+    background: rgb(128, 208, 255);
     border-radius: 50%;
     padding: 5px;
-    font-size: 1em;
+    font-size: 0.8em;
     font-family: "Press Start 2P", cursive;
   }

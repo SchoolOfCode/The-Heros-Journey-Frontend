@@ -87,14 +87,12 @@ function Stage2() {
         <Popup
           boxStyle={{
             position: "fixed",
-            top: "20vh",
-            width: "30vh",
+            top: "45vh",
             left: "58vh",
           }}
-          closeBoxStyle={{ position: "fixed", top: "31.5vh", left: "83.5vh" }}
           content={
             <>
-              <b>LET this pencil guide me to the next stage...</b>
+              LET this pencil guide me to the next stage...
             </>
           }
           handleClose={togglePopup1}
@@ -118,14 +116,12 @@ function Stage2() {
         <Popup
           boxStyle={{
             position: "fixed",
-            top: "1vh",
-            width: "16vh",
-            left: "36vh",
+            top: "10vh",
+            left: "40vh",
           }}
-          closeBoxStyle={{ position: "fixed", top: "12.3vh", left: "50vh" }}
           content={
             <>
-              <b>VARubber...</b>
+              Very Awesome Rubber...
             </>
           }
           handleClose={togglePopup2}
@@ -148,14 +144,12 @@ function Stage2() {
         <Popup
           boxStyle={{
             position: "fixed",
-            top: "1vh",
-            width: "30vh",
-            left: "90vh",
+            top: "10vh",
+            right: "30vh",
           }}
-          closeBoxStyle={{ position: "fixed", top: "12.5vh", left: "115.8vh" }}
           content={
             <>
-              <b>The earths spin is CONSTANT...</b>
+              The earth's spin is CONSTANT...
             </>
           }
           handleClose={togglePopup3}
