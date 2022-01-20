@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Input from '../Input';
@@ -6,12 +7,13 @@ import Padlock from '../Padlock';
 import SideNav from '../Sidenav';
 import Alert from '../Alert';
 
+
 // Stage 3 - Imposter Syndrome stage - Hole in the ship Weeks 4-5 Backend Node, SQL
 // stage 3
 
 function Stage3() {
-  const [password, setPassword] = useState('');
-  const [link, setLink] = useState('/stage3');
+  const [password, setPassword] = useState("");
+  const [link, setLink] = useState("/imposter-syndrome");
 
   const [alert1, setAlert1] = useState(true);
   const [alert2, setAlert2] = useState(true);
@@ -47,18 +49,18 @@ function Stage3() {
 
   function handleChange(e) {
     setPassword(e.target.value);
-    if (e.target.value === 'VALUES') {
-      setLink('/stage4');
+    if (e.target.value === "VALUES" || e.target.value === "values") {
+      setLink("/transformation");
     } else {
-      setLink('/stage3');
+      setLink("/imposter-syndrome");
     }
   }
 
   function submit() {
-    if (password !== 'VALUES') {
-      return alert('Access Denied');
+    if (password !== "VALUES" && password !== "values") {
+      return alert("Access Denied");
     } else {
-      alert('Permission granted');
+      alert("Permission granted");
     }
   }
 
@@ -150,51 +152,51 @@ function Stage3() {
       <Text
         text="INSERT INTO spaceship"
         style={{
-          position: 'fixed',
-          top: '25vh',
+          position: "fixed",
+          top: "25vh",
           opacity: 1,
-          width: '43vh',
-          fontSize: '2vh',
-          fontWeight: 'bold',
-          color: 'white',
+          width: "43vh",
+          fontSize: "2vh",
+          fontWeight: "bold",
+          color: "white",
         }}
       />
       <Text
         text="(SQL)"
         style={{
-          position: 'fixed',
+          position: "fixed",
           opacity: 1,
-          fontSize: '2vh',
-          fontWeight: 'bold',
-          color: 'white',
+          fontSize: "2vh",
+          fontWeight: "bold",
+          color: "white",
         }}
       />
       <Text
         text="($1, $2) RETURNING"
         style={{
-          position: 'fixed',
-          bottom: '25vh',
+          position: "fixed",
+          bottom: "25vh",
           opacity: 1,
-          fontSize: '2vh',
-          fontWeight: 'bold',
-          color: 'white',
+          fontSize: "2vh",
+          fontWeight: "bold",
+          color: "white",
         }}
       />
       <Text
         text="password"
         style={{
-          position: 'fixed',
-          bottom: '23vh',
+          position: "fixed",
+          bottom: "23vh",
           opacity: 1,
-          fontSize: '2vh',
-          fontWeight: 'bold',
-          color: 'white',
+          fontSize: "2vh",
+          fontWeight: "bold",
+          color: "white",
         }}
       />
       <Input
         placeholder="Password"
         handleChange={handleChange}
-        style={{ position: 'fixed', bottom: '8vh', right: '15vh' }}
+        style={{ position: "fixed", bottom: "8vh", right: "15vh" }}
       />
       <Link onClick={submit} to={link}>
         <Padlock />

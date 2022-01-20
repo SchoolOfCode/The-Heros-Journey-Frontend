@@ -24,14 +24,14 @@ function StartScreen() {
         }}
       >
         <Link
-          to="/stage1"
+          to="/start-of-the-journey"
           className="menuLink"
           style={{ color: "black", backgroundColor: "#00ffc2" }}
         >
           BEGIN
         </Link>
         <Link
-          to="/HowToPlay"
+          to="/how-to-play"
           className="menuLink"
           style={{ color: "black", backgroundColor: "#00ffc2", width: "150px" }}
         >
