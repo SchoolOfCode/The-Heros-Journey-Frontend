@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 // Stage 1 - Application Stage - Main Menu of game - Typing name, (Saving state), List Info about school of code - Coding experience? Employment Statistics?
 
@@ -9,6 +10,26 @@ import './style.css';
 const API_URL = process.env.REACT_APP_API_URL;
 
 function Stage1() {
+  const [name, setName] = useState('');
+  const [quote, setQuote] = useState('');
+  let newQuote = { name: name, quote: quote };
+
+  function handleSubmit() {
+    fetch(`${API_URL}quotes`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newQuote),
+    });
+  }
+
+  function handleName(e) {
+    setName(e.target.value);
+  }
+
+  function handleQuote(e) {
+    setQuote(e.target.value);
+  }
+
   return (
     <div
       className="stage"
@@ -37,14 +58,9 @@ function Stage1() {
         stage of your coding journey! Please enter a team name and a quote that
         motivates you.
       </p>
-
-      {/* <form action="http://localhost:3000/scores" method="post">
-      <input type="text" name="name" placeholder="Name">
-      <input type="text" name="quote" placeholder="Score">
-      <button type="submit" class="add">Add</button>
-    </form> */}
-      <form action={`${API_URL}quotes`} method="post">
+      <form onSubmit={handleSubmit} action={`${API_URL}quotes`} method="post">
         <InputBox
+          handleChange={handleName}
           name="name"
           placeholder="Team Name"
           style={{
@@ -61,6 +77,7 @@ function Stage1() {
           }}
         />
         <InputBox
+          handleChange={handleQuote}
           name="quote"
           placeholder="Quote"
           style={{
@@ -76,8 +93,7 @@ function Stage1() {
             fontSize: `20px`,
           }}
         />
-
-        <div style={{ position: 'fixed', left: '10' }}></div>
+        {/* <div style={{ position: 'fixed', left: '10' }}></div> */}
         <div
           style={{
             display: 'flex',
@@ -87,8 +103,8 @@ function Stage1() {
             alignItems: 'center',
           }}
         >
-          <Link type="submit" to="/stage2" className="go-link">
-            GO!
+          <Link onClick={handleSubmit} to="/stage2" className="go-link">
+            Go!
           </Link>
         </div>
       </form>
