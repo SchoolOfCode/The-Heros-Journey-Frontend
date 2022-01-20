@@ -4,12 +4,11 @@ input {
   box-shadow: 2px 2px 4px rgba(47, 47, 47, 0.29);
   border-radius: 30px;
   border-style: none;
-  margin: 10px;
-  padding: 30px 50px;
-  font-size: 20px;
-  line-height: 1.5em;
-  height: 75px;
-  width: 200px;
+  margin: 1vh;
+  padding: 2vh;
+  font-size: 1.5vh;
+  height: 1vh;
+  width: 20vw;
 }
 
 ::placeholder {
