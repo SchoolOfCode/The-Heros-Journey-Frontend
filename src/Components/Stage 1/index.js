@@ -105,7 +105,11 @@ function Stage1() {
             alignItems: "center",
           }}
         >
-          <Link onClick={handleSubmit} to="/" className="go-link">
+          <Link
+            onClick={handleSubmit}
+            to="/start-of-the-journey"
+            className="go-link"
+          >
             Go!
           </Link>
         </div>
