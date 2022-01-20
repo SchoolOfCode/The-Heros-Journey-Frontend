@@ -5,6 +5,7 @@ import Click from "../Click";
 import Input from "../Input";
 import Padlock from "../Padlock";
 import SideNav from "../Sidenav";
+import clickInfo from "./clickInfo";
 
 // Stage 4 - Heroes journey - transformative - Floating in space Weeks 7-8 React
 
@@ -42,26 +43,6 @@ function Stage4() {
     }
   }
 
-  function handleClick(text) {
-    switch (text) {
-      case "1":
-        console.log("useQuestionMark");
-        break;
-      case "2":
-        console.log("useHelmet");
-        break;
-      case "3":
-        console.log("usePlanet");
-        break;
-      case "4":
-        console.log("useComet");
-      case "5":
-        console.log("useSuperhero");
-        break;
-      default:
-    }
-  }
-
   return (
     <div
       className="stage"
@@ -78,80 +59,26 @@ function Stage4() {
         stageDesc="React: React router, Hooks, JSX.
         The power of reusability."
       />
-      <Click
-        text="1"
-        handleClick={handleClick}
-        style={{
-          position: "fixed",
-          top: "28.5vh",
-          marginRight: "79vh",
-          height: "9vh",
-          width: "6vh",
-          opacity: 0,
-        }}
-      />
-      <Click
-        text="2"
-        handleClick={handleClick}
-        style={{
-          position: "fixed",
-          top: "39vh",
-          marginRight: "61.5vh",
-          height: "14vh",
-          width: "11vh",
-          borderRadius: "40%",
-          transform: "rotate(-25deg)",
-          opacity: 0,
-        }}
-      />
-      <Click
-        text="3"
-        handleClick={handleClick}
-        style={{
-          position: "fixed",
-          bottom: "11.5vh",
-          marginLeft: "26.5vh",
-          height: "14vh",
-          width: "26vh",
-          borderRadius: "50%",
-          transform: "rotate(-25deg)",
-          opacity: 0,
-        }}
-      />
-      <Click
-        text="4"
-        handleClick={handleClick}
-        style={{
-          position: "fixed",
-          top: "45vh",
-          marginLeft: "25.5vh",
-          height: "11vh",
-          width: "11vh",
-          transform: "skew(40deg)",
-          opacity: 0,
-        }}
-      />
-      <Click
-        text="5"
-        handleClick={handleClick}
-        style={{
-          position: "fixed",
-          top: "8vh",
-          marginLeft: "40.5vh",
-          height: "25vh",
-          width: "40vh",
-          transform: "skew(50deg)",
-          borderRadius: "50% 50% 40% 50%",
 
-          opacity: 0,
-        }}
-      />
       <p style={{ 
         position: "fixed", 
         bottom: "3vh", 
         right: "10vh" }}>
         Hint: Console
       </p>
+
+      {/* map through items on clickInfo array to get styling, text and function to be called on each button */}
+      {clickInfo.map((item) => {
+        return (
+          <Click
+            text={item.text}
+            handleClick={item.handleClick}
+            style={item.style}
+            key={item.key}
+          />
+        );
+      })}
+
       <Input
         placeholder="Password"
         handleChange={handleChange}
