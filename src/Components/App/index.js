@@ -19,12 +19,12 @@ function App() {
     >
       <Routes>
         <Route path="/" element={<StartScreen />} />
-        <Route path="howtoplay" element={<HowToPlay />} />
-        <Route path="stage1" element={<Stage1 />} />
-        <Route path="stage2" element={<Stage2 />} />
-        <Route path="stage3" element={<Stage3 />} />
-        <Route path="stage4" element={<Stage4 />} />
-        <Route path="stage5" element={<Stage5 />} />
+        <Route path="how-to-play" element={<HowToPlay />} />
+        <Route path="about" element={<Stage1 />} />
+        <Route path="start-of-the-journey" element={<Stage2 />} />
+        <Route path="imposter-syndrome" element={<Stage3 />} />
+        <Route path="transformation" element={<Stage4 />} />
+        <Route path="mission-complete" element={<Stage5 />} />
       </Routes>
       {/* <Link to="/stage1">Play Again</Link> */}
     </div>
