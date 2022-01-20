@@ -5,7 +5,7 @@ function Alert({ handleClose, content, style }) {
     <div className="alert">
       <div className="alert-box" style={style}>
         <span className="close-alert" onClick={handleClose}>x</span>
-        {content}
+        <p>{content}</p>
       </div>
     </div>
   );

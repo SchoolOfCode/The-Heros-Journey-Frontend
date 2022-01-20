@@ -9,7 +9,6 @@ import Alert from '../Alert';
 
 
 // Stage 3 - Imposter Syndrome stage - Hole in the ship Weeks 4-5 Backend Node, SQL
-// stage 3
 
 function Stage3() {
   const [password, setPassword] = useState("");
@@ -95,7 +94,7 @@ function Stage3() {
       )}
 
       {alert2 && ( <Alert 
-        style={{ position: `fixed`, bottom: `80vh`, right: `60vh` }}
+        style={{ position: `fixed`, bottom: `80vh`, right: `40vh` }}
         content={
             <>
               <b>I'M AN IMPOSTER!</b>
@@ -106,7 +105,7 @@ function Stage3() {
       )}
 
       {alert3 && ( <Alert 
-        style={{ position: `fixed`, bottom: `25vh`, right: `45vh` }}
+        style={{ position: `fixed`, bottom: `20vh`, right: `45vh` }}
         content={
             <>
               <b>YOU'RE AN IMPOSTER!</b>
@@ -117,7 +116,7 @@ function Stage3() {
       )}
 
       {alert4 && ( <Alert 
-        style={{ position: `fixed`, top: `20vh`, right: `90vh` }}
+        style={{ position: `fixed`, top: `20vh`, left: `20vh` }}
         content={
             <>
               <b>HELP!</b>
@@ -128,7 +127,7 @@ function Stage3() {
       )}
 
       {alert5 && ( <Alert 
-        style={{ position: `fixed`, top: `40vh`, left: `75vh` }}
+        style={{ position: `fixed`, top: `45vh`, left: `80vh` }}
         content={
             <>
               <b>WE ARE IMPOSTERS!</b>
