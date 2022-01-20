@@ -69,7 +69,7 @@ function Stage2() {
         stageDesc="HTML, CSS, VanillaJS.
         Learning the fundamentals."
       />
-
+          
       <Click
         handleClick={togglePopup1}
         style={{
@@ -100,7 +100,7 @@ function Stage2() {
           handleClose={togglePopup1}
         />
       )}
-
+      
       <Click
         handleClick={togglePopup2}
         style={{
@@ -163,6 +163,7 @@ function Stage2() {
       )}
 
       <Input
+        className="to-be-clicked"
         placeholder="Password"
         handleChange={handleChange}
         style={{ position: "fixed", bottom: "8vh", right: "15vh" }}
