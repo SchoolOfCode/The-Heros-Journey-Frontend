@@ -4,6 +4,7 @@ import Input from "../Input";
 import Popup from "../Popup";
 import Padlock from "../Padlock";
 import SideNav from "../Sidenav";
+import Click from "../Click";
 import { useState } from "react";
 import "./style.css";
 
@@ -39,8 +40,6 @@ function Stage2() {
     }
   }
 
-  // Each pop-up will have to have their own state/function or else they all of them will open at the same time.
-
   const togglePopup1 = () => {
     setIsOpen1(!isOpen1);
   };
@@ -63,18 +62,16 @@ function Stage2() {
         backgroundSize: `100vh`,
       }}
     >
-      {/* <img src="https://i.imgur.com/6BnAjur.png" alt="background" className="stagebg" height="90%" /> */}
+
       <SideNav
         title="The world is your oyster..."
         description="Every start of a new journey is always exciting... Eyes full of wonder, ready to learn..."
         stageDesc="HTML, CSS, VanillaJS.
         Learning the fundamentals."
       />
-      {/* Pop-up 1 */}
-      <input
-        className="to-be-clicked"
-        type="button"
-        onClick={togglePopup1}
+          
+      <Click
+        handleClick={togglePopup1}
         style={{
           position: "fixed",
           top: "35vh",
@@ -103,11 +100,9 @@ function Stage2() {
           handleClose={togglePopup1}
         />
       )}
-      {/* Pop-up 2 */}
-      <input
-        className="to-be-clicked"
-        type="button"
-        onClick={togglePopup2}
+      
+      <Click
+        handleClick={togglePopup2}
         style={{
           position: "fixed",
           top: "13.5vh",
@@ -136,11 +131,9 @@ function Stage2() {
           handleClose={togglePopup2}
         />
       )}
-      {/* Pop-up 3 */}
-      <input
-        className="to-be-clicked"
-        type="button"
-        onClick={togglePopup3}
+
+      <Click
+        handleClick={togglePopup3}
         style={{
           position: "fixed",
           top: "11vh",

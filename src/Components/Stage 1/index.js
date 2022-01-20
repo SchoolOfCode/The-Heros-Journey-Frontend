@@ -3,7 +3,7 @@ import { useState } from "react";
 
 // Stage 1 - Application Stage - Main Menu of game - Typing name, (Saving state), List Info about school of code - Coding experience? Employment Statistics?
 
-import InputBox from "../InputBox";
+import Input from "../Input";
 import StartHeading from "../../Components/StartScreen/StartHeading";
 import "./style.css";
 
@@ -61,7 +61,7 @@ function Stage1() {
 
       </p>
       <form onSubmit={handleSubmit} action={`${API_URL}quotes`} method="post">
-        <InputBox
+        <Input
           handleChange={handleName}
           name="name"
           placeholder="Team Name"
@@ -78,7 +78,7 @@ function Stage1() {
             fontSize: `20px`,
           }}
         />
-        <InputBox
+        <Input
           handleChange={handleQuote}
           name="quote"
           placeholder="Quote"
