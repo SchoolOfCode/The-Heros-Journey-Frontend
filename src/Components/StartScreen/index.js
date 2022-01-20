@@ -24,7 +24,7 @@ function StartScreen() {
         }}
       >
         <Link
-          to="/start-of-the-journey"
+          to="/about"
           className="menuLink"
           style={{ color: "black", backgroundColor: "#00ffc2" }}
         >
