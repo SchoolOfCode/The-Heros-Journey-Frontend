@@ -50,7 +50,7 @@ function Stage1() {
         style={{
           color: "white",
           position: "fixed",
-          top: "33vh",
+          top: "35vh",
         }}
       >
         This game represents the School of Code journey. 
@@ -67,15 +67,7 @@ function Stage1() {
           placeholder="Team Name"
           style={{
             position: "fixed",
-            bottom: "30vh",
-            backgroundColor: `white`,
-            textAlign: `center`,
-            boxShadow: `2px 2px 4px rgba(47, 47, 47, 0.29)`,
-            borderRadius: `30px`,
-            borderStyle: `none`,
-            margin: `20px`,
-            padding: `12px 50px`,
-            fontSize: `20px`,
+            bottom: "32vh",
           }}
         />
         <Input
@@ -84,18 +76,9 @@ function Stage1() {
           placeholder="Quote"
           style={{
             position: "fixed",
-            bottom: "23vh",
-            backgroundColor: `white`,
-            textAlign: `center`,
-            boxShadow: `2px 2px 4px rgba(47, 47, 47, 0.29)`,
-            borderRadius: `30px`,
-            borderStyle: `none`,
-            margin: `20px`,
-            padding: `12px 50px`,
-            fontSize: `20px`,
+            bottom: "27vh",
           }}
         />
-        {/* <div style={{ position: 'fixed', left: '10' }}></div> */}
         <div
           style={{
             display: "flex",

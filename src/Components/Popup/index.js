@@ -1,7 +1,10 @@
+import "./style.css";
+
 function Popup ({ boxStyle, closeBoxStyle, handleClose, content }) {
   return (
     <div className="popup-box" style={boxStyle}>
       <div className="box">
+      {content}
         <span
           style={closeBoxStyle}
           className="close-icon"
@@ -9,7 +12,6 @@ function Popup ({ boxStyle, closeBoxStyle, handleClose, content }) {
         >
           x
         </span>
-        {content}
       </div>
     </div>
   );

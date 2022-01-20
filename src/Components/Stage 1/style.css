@@ -2,22 +2,21 @@
 
 .go-link {
   background-color: #00ffc2;
-  background: #00ffc2;
   text-align: center;
   box-shadow: 2px 2px 4px rgba(47, 47, 47, 0.29);
   border-radius: 30px;
   border-style: none;
   padding: 12px;
   font-size: 1em;
-  width: 70px;
+  width: auto;
   font-family: "Press Start 2P", cursive;
   text-decoration: none;
 }
 
 p {
-  font-size: 1em;
+  font-size: 2vh;
   margin-top: 0;
-  width: 400px;
+  width: 30vw;
   text-align: center;
   font-family: "Press Start 2P", cursive;
 }
