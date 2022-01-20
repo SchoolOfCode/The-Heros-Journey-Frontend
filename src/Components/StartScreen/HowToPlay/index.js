@@ -1,4 +1,4 @@
-import StartHeading from "../StartHeading";
+import Heading from "../../Heading";
 import { Link } from "react-router-dom";
 import "../style.css";
 
@@ -22,7 +22,7 @@ function HowToPlay() {
           top: "10vh",
         }}
       >
-      <StartHeading
+      <Heading
         text="How To Play"
         style={{ 
           position: "fixed", 
@@ -35,8 +35,8 @@ function HowToPlay() {
         position: "fixed", 
         top: "42vh" }}>
 
-      This is a point-and-click game, in each room you will have to look and click around to gather hints of the password to progress onto the next stage.
-      
+      This is a point-and-click game, in each room you will have to look around to gather hints of the password. Once you enter your password guess, click on the padlock to see if you have succeeded!
+
       Work together as a team and support each other throughout this journey!
       </p>
 

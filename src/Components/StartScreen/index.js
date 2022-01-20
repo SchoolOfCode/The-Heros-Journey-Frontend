@@ -1,4 +1,4 @@
-import StartHeading from "./StartHeading";
+import Heading from "../Heading";
 import { Link } from "react-router-dom";
 import "./style.css";
 
@@ -22,7 +22,7 @@ function StartScreen() {
           alignItems: "center",
         }}
       >
-      <StartHeading text="The Hero's Journey" />
+      <Heading text="The Hero's Journey" />
         <Link
           to="/about"
           className="menuLink"

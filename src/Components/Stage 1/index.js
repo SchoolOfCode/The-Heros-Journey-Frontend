@@ -4,7 +4,7 @@ import { useState } from "react";
 // Stage 1 - Application Stage - Main Menu of game - Typing name, (Saving state), List Info about school of code - Coding experience? Employment Statistics?
 
 import Input from "../Input";
-import StartHeading from "../../Components/StartScreen/StartHeading";
+import Heading from "../Heading";
 import "./style.css";
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -51,7 +51,7 @@ function Stage1() {
             alignItems: "center",
           }}
         >
-      <StartHeading
+      <Heading
         text="About"
         style={{ 
           position: "fixed", 
@@ -79,7 +79,6 @@ function Stage1() {
           style={{
             position: "fixed",
             bottom: "32vh",
-            height: "4vh",
           }}
         />
         <Input
@@ -89,7 +88,6 @@ function Stage1() {
           style={{
             position: "fixed",
             bottom: "25vh",
-            height: "4vh",
           }}
         />
 

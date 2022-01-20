@@ -148,7 +148,7 @@ function Stage4() {
       />
       <p style={{ 
         position: "fixed", 
-        bottom: "10vh", 
+        bottom: "3vh", 
         right: "10vh" }}>
         Hint: Console
       </p>

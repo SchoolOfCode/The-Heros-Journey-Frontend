@@ -1,4 +1,4 @@
-import Header from "../Header";
+import Heading from "../Heading";
 import { Link } from "react-router-dom";
 import "./style.css";
 import { useState, useEffect } from "react";
@@ -34,9 +34,11 @@ function Stage5() {
     <div style={{
         display: "flex",
         flexDirection: "column",
-        alignItems: "center"
+        position: "fixed",
+        top: "45vh",
+        alignItems: "center",
   }}>
-      <Header text="Mission Complete!" 
+      <Heading text="Mission Complete!" 
         style={{ 
           position: "fixed", 
           top: "15vh"
