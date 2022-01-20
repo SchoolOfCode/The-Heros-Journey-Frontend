@@ -1,15 +1,15 @@
-import Header from '../Header';
-import { Link } from 'react-router-dom';
-import './style.css';
-import { useState, useEffect } from 'react';
+import Header from "../Header";
+import { Link } from "react-router-dom";
+import "./style.css";
+import { useState, useEffect } from "react";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
 // Stage 5 - Mission complete - Launch into the real world - Light speed into another galaxy - Motivational quotes fetched from an API of past bootcampers
 
 function Stage5() {
-  const [quote, setQuote] = useState('');
-  const [name, setName] = useState('');
+  const [quote, setQuote] = useState("");
+  const [name, setName] = useState("");
 
   useEffect(() => {
     async function getQuotes() {
@@ -32,11 +32,18 @@ function Stage5() {
       }}
     >
       <Header text="Mission Complete!" />
-      <p>Congratulations {name}, you have made it to the end!</p>
-      
-      <p>Remember these words you told yourself at the beginning: {quote}</p>
+      <p className="end-page">
+        Congratulations {name}, you have made it to the end!
+      </p>
 
-      <p>You should be proud of how far you’ve come, and it can only go upwards from here on out!</p>
+      <p className="end-page">
+        Remember these words you told yourself at the beginning: {quote}
+      </p>
+
+      <p className="end-page">
+        You should be proud of how far you’ve come, and it can only go upwards
+        from here on out!
+      </p>
 
       <Link className="play-again-link" to="/">
         Play Again {name}?

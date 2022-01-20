@@ -10,15 +10,15 @@ function SideNav({ title, description, stageDesc }) {
         <div></div>
       </button>
       <h1 style={{ fontColor: "white", margin: "20px" }}>{title}</h1>
-      <p style={{ fontColor: "black", fontSize: "1em", textAlign: "left" }}>
-        {description}
-      </p>
+      <p style={{ fontColor: "black", textAlign: "left" }}>{description}</p>
+
       <p
         style={{
-          position: "fixed",
-          bottom: "5vh",
           fontStyle: "italic",
           textAlign: "left",
+          position: "relative",
+          top: "300px",
+          overflow: "scroll",
         }}
       >
         {stageDesc}

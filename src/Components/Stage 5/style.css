@@ -13,4 +13,11 @@
   width: 170px;
   font-family: "Press Start 2P", cursive;
   text-decoration: none;
+  margin-top: 30px;
+}
+
+.end-page {
+  padding: 10px;
+  color: white;
+  background-color: rgba(4, 41, 79, 0.7);
 }
