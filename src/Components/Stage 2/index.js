@@ -71,6 +71,7 @@ function Stage2() {
       />
       {/* Pop-up 1 */}
       <input
+        className="to-be-clicked"
         type="button"
         onClick={togglePopup1}
         style={{
@@ -103,6 +104,7 @@ function Stage2() {
       )}
       {/* Pop-up 2 */}
       <input
+        className="to-be-clicked"
         type="button"
         onClick={togglePopup2}
         style={{
@@ -135,6 +137,7 @@ function Stage2() {
       )}
       {/* Pop-up 3 */}
       <input
+        className="to-be-clicked"
         type="button"
         onClick={togglePopup3}
         style={{
@@ -166,6 +169,7 @@ function Stage2() {
       )}
 
       <Input
+        className="to-be-clicked"
         placeholder="Password"
         handleChange={handleChange}
         style={{ position: "fixed", bottom: "8vh", right: "15vh" }}

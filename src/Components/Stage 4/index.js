@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 import { Link } from "react-router-dom";
 import Click from "../Click";
 import Input from "../Input";
@@ -85,7 +86,6 @@ function Stage4() {
           marginRight: "79vh",
           height: "9vh",
           width: "6vh",
-          cursor: "pointer",
           opacity: 0,
         }}
       />
@@ -98,7 +98,6 @@ function Stage4() {
           marginRight: "61.5vh",
           height: "14vh",
           width: "11vh",
-          cursor: "pointer",
           borderRadius: "40%",
           transform: "rotate(-25deg)",
           opacity: 0,
@@ -115,7 +114,6 @@ function Stage4() {
           width: "26vh",
           borderRadius: "50%",
           transform: "rotate(-25deg)",
-          cursor: "pointer",
           opacity: 0,
         }}
       />
@@ -130,7 +128,6 @@ function Stage4() {
           width: "11vh",
           transform: "skew(40deg)",
           opacity: 0,
-          cursor: "pointer",
         }}
       />
       <Click
@@ -144,7 +141,7 @@ function Stage4() {
           width: "40vh",
           transform: "skew(50deg)",
           borderRadius: "50% 50% 40% 50%",
-          cursor: "pointer",
+
           opacity: 0,
         }}
       />
