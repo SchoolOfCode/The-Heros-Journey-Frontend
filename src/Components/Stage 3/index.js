@@ -4,6 +4,7 @@ import Input from '../Input';
 import Text from '../Text';
 import Padlock from '../Padlock';
 import SideNav from '../Sidenav';
+import Alert from '../Alert';
 
 // Stage 3 - Imposter Syndrome stage - Hole in the ship Weeks 4-5 Backend Node, SQL
 // stage 3
@@ -11,6 +12,9 @@ import SideNav from '../Sidenav';
 function Stage3() {
   const [password, setPassword] = useState('');
   const [link, setLink] = useState('/stage3');
+
+  const [isOpen1, setAlert1] = useState(true);
+
 
   function handleChange(e) {
     setPassword(e.target.value);
@@ -20,6 +24,10 @@ function Stage3() {
       setLink('/stage3');
     }
   }
+
+  const toggleAlert1 = () => {
+    setAlert1(!isOpen1);
+  };
 
   function submit() {
     if (password !== 'VALUES') {
@@ -45,6 +53,21 @@ function Stage3() {
       'What am I doing here?' is a question you may ask yourself as you begin to self-doubt and be filled with intrusive thoughts..."
         stageDesc="Back-end"
       />
+
+      {isOpen1 && ( <Alert 
+        style={{
+          position: `fixed`,
+          top: `10vh`,
+          left: `20vh`
+        }}
+        content={
+            <>
+              <b>IMPOSTER!</b>
+            </>
+          } handleClose={toggleAlert1}
+        />
+      )};
+
 
       <Text
         text="INSERT INTO spaceship"
