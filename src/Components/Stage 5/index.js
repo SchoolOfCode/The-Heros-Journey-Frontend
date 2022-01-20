@@ -1,4 +1,4 @@
-import Header from "../Header";
+import Heading from "../Heading";
 import { Link } from "react-router-dom";
 import "./style.css";
 import { useState, useEffect } from "react";
@@ -31,24 +31,52 @@ function Stage5() {
         backgroundSize: `100vh`,
       }}
     >
-      <Header text="Mission Complete!" />
-      <p className="end-page">
-        Congratulations {name}, you have made it to the end!
+    <div style={{
+        display: "flex",
+        flexDirection: "column",
+        position: "fixed",
+        top: "45vh",
+        alignItems: "center",
+  }}>
+      <Heading text="Mission Complete!" 
+        style={{ 
+          position: "fixed", 
+          top: "15vh"
+           }}
+      />
+      <div className="end-page">
+
+      <p className="team-input">
+        Congratulations, {name}!</p>
+
+        <p 
+          style={{
+          fontSize: "1.5vh",
+        }} > 
+        You have made it to the end!
       </p>
 
-      <p className="end-page">
+      <p
+          style={{
+          fontSize: "1.5vh",
+        }}>
         Remember these words you told yourself at the beginning:</p>
         
-      <p className="end-page"> {quote}</p>
+      <p className="team-input">{quote}</p>
 
-      <p className="end-page">
+      <p  
+          style={{
+          fontSize: "1.5vh",
+        }}>
         You should be proud of how far you’ve come, and it can only go upwards
         from here on out!
       </p>
+      </div>
 
       <Link className="play-again-link" to="/">
-        Play Again {name}?
+        Play Again, {name}?
       </Link>
+      </div>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import { useState } from "react";
 // Stage 1 - Application Stage - Main Menu of game - Typing name, (Saving state), List Info about school of code - Coding experience? Employment Statistics?
 
 import Input from "../Input";
-import StartHeading from "../../Components/StartScreen/StartHeading";
+import Heading from "../Heading";
 import "./style.css";
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -42,9 +42,20 @@ function Stage1() {
         flexDirection: `column`,
       }}
     >
-      <StartHeading
+     <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            position: "fixed",
+            bottom: "17vh",
+            alignItems: "center",
+          }}
+        >
+      <Heading
         text="About"
-        style={{ fontSize: "10vh", position: "fixed", top: "15vh" }}
+        style={{ 
+          position: "fixed", 
+          top: "15vh" }}
       />
       <p
         style={{
@@ -76,18 +87,10 @@ function Stage1() {
           placeholder="Quote"
           style={{
             position: "fixed",
-            bottom: "27vh",
+            bottom: "25vh",
           }}
         />
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            position: "fixed",
-            bottom: "18vh",
-            alignItems: "center",
-          }}
-        >
+
           <Link
             onClick={handleSubmit}
             to="/start-of-the-journey"
@@ -95,8 +98,8 @@ function Stage1() {
           >
             Go!
           </Link>
-        </div>
       </form>
+    </div>
     </div>
   );
 }

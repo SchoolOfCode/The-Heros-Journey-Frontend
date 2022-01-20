@@ -60,6 +60,13 @@ function Stage4() {
         The power of reusability."
       />
 
+      <p style={{ 
+        position: "fixed", 
+        bottom: "3vh", 
+        right: "10vh" }}>
+        Hint: Console
+      </p>
+
       {/* map through items on clickInfo array to get styling, text and function to be called on each button */}
       {clickInfo.map((item) => {
         return (
@@ -80,9 +87,6 @@ function Stage4() {
       <Link onClick={submit} to={link}>
         <Padlock />
       </Link>
-      <p style={{ position: "fixed", bottom: "10vh", right: "10vh" }}>
-        Hint: Console
-      </p>
     </div>
   );
 }
