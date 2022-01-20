@@ -34,7 +34,7 @@ function HowToPlay() {
         <Link
           to="/"
           className="go-link"
-          style={{ color: "black", width: "150px" }}
+          style={{ color: "black", width: "150px", textDecoration: "none" }}
         >
           GO BACK
         </Link>

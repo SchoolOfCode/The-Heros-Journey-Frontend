@@ -26,14 +26,23 @@ function StartScreen() {
         <Link
           to="/about"
           className="menuLink"
-          style={{ color: "black", backgroundColor: "#00ffc2" }}
+          style={{
+            color: "black",
+            backgroundColor: "#00ffc2",
+            textDecoration: "none",
+          }}
         >
           BEGIN
         </Link>
         <Link
           to="/how-to-play"
           className="menuLink"
-          style={{ color: "black", backgroundColor: "#00ffc2", width: "150px" }}
+          style={{
+            color: "black",
+            backgroundColor: "#00ffc2",
+            width: "150px",
+            textDecoration: "none",
+          }}
         >
           HOW TO PLAY
         </Link>
