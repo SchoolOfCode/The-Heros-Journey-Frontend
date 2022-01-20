@@ -8,8 +8,8 @@ const API_URL = process.env.REACT_APP_API_URL;
 // Stage 5 - Mission complete - Launch into the real world - Light speed into another galaxy - Motivational quotes fetched from an API of past bootcampers
 
 function Stage5() {
-  const [quote, setQuote] = useState("");
-  const [name, setName] = useState("");
+  const [quote, setQuote] = useState('');
+  const [name, setName] = useState('');
 
   useEffect(() => {
     async function getQuotes() {

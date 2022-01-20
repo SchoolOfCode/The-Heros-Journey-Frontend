@@ -1,45 +1,50 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-import { Link } from "react-router-dom";
-import Click from "../Click";
-import Input from "../Input";
-import Padlock from "../Padlock";
-import SideNav from "../Sidenav";
-import clickInfo from "./clickInfo";
+import { Link } from 'react-router-dom';
+import Click from '../Click';
+import Input from '../Input';
+import Padlock from '../Padlock';
+import SideNav from '../Sidenav';
+import clickInfo from './clickInfo';
 
+const API_URL = process.env.REACT_APP_API_URL;
 // Stage 4 - Heroes journey - transformative - Floating in space Weeks 7-8 React
 
 function Stage4() {
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState('');
+  const [passwords, setPasswords] = useState([]);
 
-  const [link, setLink] = useState("/transformation");
+  const [link, setLink] = useState('/transformation');
+
+  useEffect(() => {
+    async function getPasswords() {
+      const response = await fetch(`${API_URL}passwords`);
+      const data = await response.json();
+      setPasswords(data.payload);
+    }
+    getPasswords();
+  }, []);
 
   useEffect(() => {
     console.log(
-      "I wonder what happens if I click around a bit and USE some of these objects..."
+      'I wonder what happens if I click around a bit and USE some of these objects...'
     );
   }, []);
 
   function handleChange(e) {
     setPassword(e.target.value);
-    if (
-      e.target.value.toLowerCase() === "hooks" ||
-      e.target.value.toLowerCase() === "hook"
-    ) {
-      setLink("/mission-complete");
+    if (e.target.value.toLowerCase() === passwords[3].password) {
+      setLink('/mission-complete');
     } else {
-      setLink("/transformation");
+      setLink('/transformation');
     }
   }
 
   function submit() {
-    if (
-      password.toLowerCase() !== "hooks" &&
-      password.toLowerCase() !== "hook"
-    ) {
-      return alert("Access Denied");
+    if (password.toLowerCase() !== passwords[3].password) {
+      return alert('Access Denied');
     } else {
-      alert("Permission granted");
+      alert('Permission granted');
     }
   }
 
@@ -82,7 +87,7 @@ function Stage4() {
       <Input
         placeholder="Password"
         handleChange={handleChange}
-        style={{ position: "fixed", bottom: "8vh", right: "15vh" }}
+        style={{ position: 'fixed', bottom: '8vh', right: '15vh' }}
       />
       <Link onClick={submit} to={link}>
         <Padlock />
