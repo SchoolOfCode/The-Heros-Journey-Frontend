@@ -3,9 +3,9 @@ import { useState } from 'react';
 
 // Stage 1 - Application Stage - Main Menu of game - Typing name, (Saving state), List Info about school of code - Coding experience? Employment Statistics?
 
-import Input from "../Input";
-import Heading from "../Heading";
-import "./style.css";
+import Input from '../Input';
+import Heading from '../Heading';
+import './style.css';
 
 const API_URL = process.env.REACT_APP_API_URL;
 
@@ -59,34 +59,35 @@ function Stage1() {
         flexDirection: `column`,
       }}
     >
-     <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            position: "fixed",
-            bottom: "17vh",
-            alignItems: "center",
-          }}
-        >
-      <Heading
-        text="About"
-        style={{ 
-          position: "fixed", 
-          top: "15vh" }}
-      />
-      <p
+      <div
         style={{
-          color: 'white',
+          display: 'flex',
+          flexDirection: 'column',
           position: 'fixed',
-          top: '35vh',
+          bottom: '17vh',
+          alignItems: 'center',
         }}
       >
-        This game represents the School of Code journey. You'll go through the
-        stages of solving coding challenges. Each level represents a different
-        stage of your coding journey! Please enter a team name and words that
-        motivates you!
-      </p>
-      <form onSubmit={handleSubmit} action={`${API_URL}quotes`} method="post">
+        <Heading
+          text="About"
+          style={{
+            position: 'fixed',
+            top: '15vh',
+          }}
+        />
+        <p
+          style={{
+            color: 'white',
+            position: 'fixed',
+            top: '35vh',
+          }}
+        >
+          This game represents the School of Code journey. You'll go through the
+          stages of solving coding challenges. Each level represents a different
+          stage of your coding journey! Please enter a team name and words that
+          motivates you!
+        </p>
+        {/* <form onSubmit={handleSubmit} action={`${API_URL}quotes`} method="post"> */}
         <Input
           handleChange={handleName}
           name="name"
@@ -101,20 +102,20 @@ function Stage1() {
           name="quote"
           placeholder="Quote"
           style={{
-            position: "fixed",
-            bottom: "25vh",
+            position: 'fixed',
+            bottom: '25vh',
           }}
         />
-        
-          <Link
-            onClick={handleSubmit}
-            to="/start-of-the-journey"
-            className="go-link"
-          >
-            Go!
-          </Link>
-      </form>
-    </div>
+
+        <Link
+          onClick={handleSubmit}
+          to="/start-of-the-journey"
+          className="go-link"
+        >
+          Go!
+        </Link>
+        {/* </form> */}
+      </div>
     </div>
   );
 }
