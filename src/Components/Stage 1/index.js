@@ -53,10 +53,12 @@ function Stage1() {
           top: "33vh",
         }}
       >
-        This game represents the School of Code journey. You'll go through the
-        stages solving coding challenges. Each level represents a different
-        stage of your coding journey! Please enter a team name and a quote that
-        motivates you.
+        This game represents the School of Code journey. 
+        
+        You'll go through the stages of solving coding challenges. Each level represents a different stage of your coding journey! 
+        
+        Please enter a team name and words that motivates you!
+
       </p>
       <form onSubmit={handleSubmit} action={`${API_URL}quotes`} method="post">
         <InputBox

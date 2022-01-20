@@ -32,7 +32,12 @@ function Stage5() {
       }}
     >
       <Header text="Mission Complete!" />
-      <p>{quote}</p>
+      <p>Congratulations {name}, you have made it to the end!</p>
+      
+      <p>Remember these words you told yourself at the beginning: {quote}</p>
+
+      <p>You should be proud of how far you’ve come, and it can only go upwards from here on out!</p>
+
       <Link className="play-again-link" to="/">
         Play Again {name}?
       </Link>

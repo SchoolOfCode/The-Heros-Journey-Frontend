@@ -78,7 +78,8 @@ function Stage3() {
         title="Houston, we have a problem!"
         description="Getting out of your comfort zone and jumping straight into the unknown is an overwhelming feeling.
       'What am I doing here?' is a question you may ask yourself as you begin to self-doubt and be filled with intrusive thoughts..."
-        stageDesc="Back-end"
+        stageDesc="Back-end: API, SQL, Databases. 
+        Providing the server with information to make our code more dynamic."
       />
 
   {/* ALERTS */}

@@ -73,8 +73,9 @@ function Stage4() {
     >
       <SideNav
         title="Passing the threshold..."
-        description="Overcoming [...]"
-        stageDesc="React"
+        description="From this point on, there’s no turning back. You have overcome obstacles and you’re committed to the journey. This has required accepting your fears and understanding the value of connecting with others to support you on your journey."
+        stageDesc="React: React router, Hooks, JSX.
+        The power of reusability."
       />
       <Click
         text="1"

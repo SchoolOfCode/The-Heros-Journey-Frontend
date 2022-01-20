@@ -67,7 +67,8 @@ function Stage2() {
       <SideNav
         title="The world is your oyster..."
         description="Every start of a new journey is always exciting... Eyes full of wonder, ready to learn..."
-        stageDesc="VanillaJS"
+        stageDesc="HTML, CSS, VanillaJS.
+        Learning the fundamentals."
       />
       {/* Pop-up 1 */}
       <input

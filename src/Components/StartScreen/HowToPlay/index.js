@@ -18,7 +18,10 @@ function HowToPlay() {
         style={{ fontSize: "10vh", position: "fixed", top: "10vh" }}
       />
       <p style={{ color: "white" }}>
-        Click around the page to gather hints of the password.
+      This is a point-and-click game, in each room you will have to look and click around to gather hints of the password to progress onto the next stage.
+      
+      Work together as a team and support each other throughout this journey!
+
       </p>
       <div
         style={{
