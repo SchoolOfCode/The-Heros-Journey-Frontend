@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import Input from "../Input";
-import Popup from "../Popup";
-import Padlock from "../Padlock";
-import SideNav from "../Sidenav";
-import Click from "../Click";
-import { useState } from "react";
-import "./style.css";
+import Input from '../Input';
+import Popup from '../Popup';
+import Padlock from '../Padlock';
+import SideNav from '../Sidenav';
+import Click from '../Click';
+import { useState, useEffect } from 'react';
+import './style.css';
+
+const API_URL = process.env.REACT_APP_API_URL;
 
 // Stage 2 - Start of the journey - Excited - Space Bedroom - Weeks 1-3 Vanilla JS
 
@@ -14,29 +16,41 @@ function Stage2() {
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
-  const [password, setPassword] = useState("");
-  const [link, setLink] = useState("/start-of-the-journey");
+  const [password, setPassword] = useState('');
+
+  const [passwords, setPasswords] = useState([]);
+
+  const [link, setLink] = useState('/start-of-the-journey');
+
+  useEffect(() => {
+    async function getPasswords() {
+      const response = await fetch(`${API_URL}passwords`);
+      const data = await response.json();
+      setPasswords(data.payload);
+    }
+    getPasswords();
+  }, []);
 
   function handleChange(e) {
     setPassword(e.target.value);
     if (
-      e.target.value.toLowerCase() === "variables" ||
-      e.target.value.toLowerCase() === "variable"
+      e.target.value.toLowerCase() === passwords[0].password ||
+      e.target.value.toLowerCase() === passwords[1].password
     ) {
-      setLink("/imposter-syndrome");
+      setLink('/imposter-syndrome');
     } else {
-      setLink("/start-of-the-journey");
+      setLink('/start-of-the-journey');
     }
   }
 
   function submit() {
     if (
-      password.toLowerCase() !== "variables" &&
-      password.toLowerCase() !== "variable"
+      password.toLowerCase() !== passwords[0].password &&
+      password.toLowerCase() !== passwords[1].password
     ) {
-      return alert("Access Denied");
+      return alert('Access Denied');
     } else {
-      alert("Permission granted");
+      alert('Permission granted');
     }
   }
 
@@ -62,68 +76,59 @@ function Stage2() {
         backgroundSize: `100vh`,
       }}
     >
-
       <SideNav
         title="The world is your oyster..."
         description="Every start of a new journey is always exciting... Eyes full of wonder, ready to learn..."
         stageDesc="HTML, CSS, VanillaJS.
         Learning the fundamentals."
       />
-          
+
       <Click
         handleClick={togglePopup1}
         style={{
-          position: "fixed",
-          top: "35vh",
-          marginRight: "5vh",
+          position: 'fixed',
+          top: '35vh',
+          marginRight: '5vh',
           opacity: 0,
-          width: "35wh",
-          height: "10vh",
-          fontSize: "2vh",
-          transform: "rotate(25deg)",
+          width: '35wh',
+          height: '10vh',
+          fontSize: '2vh',
+          transform: 'rotate(25deg)',
         }}
       />
       {isOpen1 && (
         <Popup
           boxStyle={{
-            position: "fixed",
-            top: "45vh",
-            left: "58vh",
+            position: 'fixed',
+            top: '45vh',
+            left: '58vh',
           }}
-          content={
-            <>
-              LET this pencil guide me to the next stage...
-            </>
-          }
+          content={<>LET this pencil guide me to the next stage...</>}
           handleClose={togglePopup1}
         />
       )}
-      
+
       <Click
         handleClick={togglePopup2}
         style={{
-          position: "fixed",
-          top: "13.5vh",
-          marginRight: "72.1vh",
+          position: 'fixed',
+          top: '13.5vh',
+          marginRight: '72.1vh',
           opacity: 0,
-          width: "4vh",
-          height: "9vh",
-          transform: "rotate(45deg)",
-          borderRadius: "30%",
+          width: '4vh',
+          height: '9vh',
+          transform: 'rotate(45deg)',
+          borderRadius: '30%',
         }}
       />
       {isOpen2 && (
         <Popup
           boxStyle={{
-            position: "fixed",
-            top: "10vh",
-            left: "40vh",
+            position: 'fixed',
+            top: '10vh',
+            left: '40vh',
           }}
-          content={
-            <>
-              Very Awesome Rubber...
-            </>
-          }
+          content={<>Very Awesome Rubber...</>}
           handleClose={togglePopup2}
         />
       )}
@@ -131,27 +136,23 @@ function Stage2() {
       <Click
         handleClick={togglePopup3}
         style={{
-          position: "fixed",
-          top: "11vh",
-          marginLeft: "54vh",
+          position: 'fixed',
+          top: '11vh',
+          marginLeft: '54vh',
           opacity: 0,
-          width: "13vh",
-          height: "13vh",
-          borderRadius: "50%",
+          width: '13vh',
+          height: '13vh',
+          borderRadius: '50%',
         }}
       />
       {isOpen3 && (
         <Popup
           boxStyle={{
-            position: "fixed",
-            top: "10vh",
-            right: "30vh",
+            position: 'fixed',
+            top: '10vh',
+            right: '30vh',
           }}
-          content={
-            <>
-              The earth's spin is CONSTANT...
-            </>
-          }
+          content={<>The earth's spin is CONSTANT...</>}
           handleClose={togglePopup3}
         />
       )}
@@ -160,7 +161,7 @@ function Stage2() {
         className="to-be-clicked"
         placeholder="Password"
         handleChange={handleChange}
-        style={{ position: "fixed", bottom: "8vh", right: "15vh" }}
+        style={{ position: 'fixed', bottom: '8vh', right: '15vh' }}
       />
       <Link onClick={submit} to={link}>
         <Padlock />
