@@ -6,7 +6,7 @@ function SideNav({ title, description, stageDesc }) {
   const showSidebar = () => setSidebar(!sidebar);
   return (
     <nav className={sidebar ? "sidebar active" : "sidebar"}>
-      <button className="hamburger" type="button" onClick={showSidebar}>
+      <button className="menu-icon" type="button" onClick={showSidebar}>
         <div></div>
       </button>
       <h1 style={{ fontColor: "white", margin: "20px" }}>{title}</h1>

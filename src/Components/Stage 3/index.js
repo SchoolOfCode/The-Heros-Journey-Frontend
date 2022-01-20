@@ -13,7 +13,36 @@ function Stage3() {
   const [password, setPassword] = useState('');
   const [link, setLink] = useState('/stage3');
 
-  const [isOpen1, setAlert1] = useState(true);
+  const [alert1, setAlert1] = useState(true);
+  const [alert2, setAlert2] = useState(true);
+  const [alert3, setAlert3] = useState(true);
+  const [alert4, setAlert4] = useState(true);
+  const [alert5, setAlert5] = useState(true);
+  const [alert6, setAlert6] = useState(true);
+
+  const toggleAlert1 = () => {
+    setAlert1(!alert1);
+  };
+
+  const toggleAlert2 = () => {
+    setAlert2(!alert2);
+  };
+
+  const toggleAlert3 = () => {
+    setAlert3(!alert3);
+  };
+
+  const toggleAlert4 = () => {
+    setAlert4(!alert4);
+  };
+
+  const toggleAlert5 = () => {
+    setAlert5(!alert5);
+  };
+
+  const toggleAlert6 = () => {
+    setAlert6(!alert6);
+  };
 
 
   function handleChange(e) {
@@ -24,10 +53,6 @@ function Stage3() {
       setLink('/stage3');
     }
   }
-
-  const toggleAlert1 = () => {
-    setAlert1(!isOpen1);
-  };
 
   function submit() {
     if (password !== 'VALUES') {
@@ -54,21 +79,74 @@ function Stage3() {
         stageDesc="Back-end"
       />
 
-      {isOpen1 && ( <Alert 
-        style={{
-          position: `fixed`,
-          top: `10vh`,
-          left: `20vh`
-        }}
+  {/* ALERTS */}
+      {alert1 && ( <Alert 
+        style={{ position: `fixed`, bottom: `30vh`, left: `30vh` }}
         content={
             <>
               <b>IMPOSTER!</b>
             </>
-          } handleClose={toggleAlert1}
+          } 
+        handleClose={toggleAlert1}
         />
-      )};
+      )}
 
+      {alert2 && ( <Alert 
+        style={{ position: `fixed`, bottom: `80vh`, right: `60vh` }}
+        content={
+            <>
+              <b>I'M AN IMPOSTER!</b>
+            </>
+          } 
+        handleClose={toggleAlert2}
+        />
+      )}
 
+      {alert3 && ( <Alert 
+        style={{ position: `fixed`, bottom: `25vh`, right: `45vh` }}
+        content={
+            <>
+              <b>YOU'RE AN IMPOSTER!</b>
+            </>
+          } 
+        handleClose={toggleAlert3}
+        />
+      )}
+
+      {alert4 && ( <Alert 
+        style={{ position: `fixed`, top: `20vh`, right: `90vh` }}
+        content={
+            <>
+              <b>HELP!</b>
+            </>
+          } 
+        handleClose={toggleAlert4}
+        />
+      )}
+
+      {alert5 && ( <Alert 
+        style={{ position: `fixed`, top: `40vh`, left: `75vh` }}
+        content={
+            <>
+              <b>WE ARE IMPOSTERS!</b>
+            </>
+          } 
+        handleClose={toggleAlert5}
+        />
+      )}
+
+      {alert6 && ( <Alert 
+        style={{ position: `fixed`, top: `30vh`, left: `50vh` }}
+        content={
+            <>
+              <b>AM I AN IMPOSTER?</b>
+            </>
+          } 
+        handleClose={toggleAlert6}
+        />
+      )}
+
+  {/* HINTS */}
       <Text
         text="INSERT INTO spaceship"
         style={{
