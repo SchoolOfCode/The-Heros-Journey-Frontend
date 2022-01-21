@@ -10,9 +10,9 @@ import './style.css';
 const API_URL = process.env.REACT_APP_API_URL;
 
 function Stage1() {
-  const [name, setName] = useState('');
-  const [quote, setQuote] = useState('');
-  const [date, setDate] = useState('');
+  const [name, setName] = useState('Anonymous Player');
+  const [quote, setQuote] = useState('Actions speak louder than words...');
+  const [date, setDate] = useState(dateTime);
 
   let newQuote = { name: name, quote: quote };
   let newDate = { name: name, date: date };
