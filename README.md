@@ -31,7 +31,7 @@ The feeling evoked upon playing the game will diminish those "Imposter Syndrome"
 
 **Client:** React
 
-**Server:** Node, Express
+**Server:** Node, Express, PostgreSQL
 
 
 ## Authors
