@@ -3,11 +3,9 @@
 
 The Hero's Journey is a game that was created during project week by Richard Mckenzie, Leah Chen, Eliana Calote and Indya Molloy.
 
-> _Sometimes we are clouded by intrusive thoughts that can make us lose our way... but together we can tackle these problems and become the heroes our of own story!_
+> _Sometimes we are clouded by intrusive thoughts that can make us lose our way... but together we can tackle these problems and become the heroes of our own story!_
 
- Let's embark on [**The Hero's Journey**](https://socherosjourney.netlify.app/)!
-
---- 
+ Let's embark on [**The Hero's Journey**](https://theherosjourney.netlify.app/)!
 
 ## The Problem 
 
@@ -17,7 +15,7 @@ So, how do we find a solution for this? How can we eliminate that feeling of sel
 
 ## The Solution
 
-The School of Code has always been the beginning of a new chapter to our life story the moment we submitted our application forms, and so 
+The [School of Code](https://github.com/SchoolOfCode) has always been the beginning of a new chapter to our life story the moment we submitted our application forms, and so 
 for our solution to the problem, we wanted to tell a story. A story that will resonates with the bootcamper as they reflect on their journey with our solution - a game!
 
 We created a point-and-click game because we wanted to add a positive and a fun spin to the problem. The game is be played in a team during the "Energiser" of our day; this is to promote teamwork and communication between the bootcampers as they explore the stages and tackle problems together. _(Just like in paired programming!)_
